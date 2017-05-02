@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+]>
+<svg version="1.1" id="圖層_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="27px" height="27px" viewBox="0 0 27 27" enable-background="new 0 0 27 27" xml:space="preserve">
+<g>
+	<g opacity="0.67"  a:adobe-blending-mode="multiply"  a:adobe-opacity-share="1">
+		<path fill="#66A135"  a:adobe-blending-mode="normal"  a:adobe-opacity-share="0" d="M23.86,4.005H4.05
+			C3.303,4.005,2.7,4.707,2.7,5.572c0,0.864,0.604,1.566,1.351,1.566h19.81c0.746,0,1.35-0.702,1.35-1.566
+			C25.209,4.707,24.606,4.005,23.86,4.005z"/>
+	</g>
+	<g>
+		<path fill="#FFFFFF" d="M23.56,3.605H3.75C3.003,3.605,2.4,4.307,2.4,5.172c0,0.864,0.604,1.566,1.351,1.566h19.81
+			c0.746,0,1.35-0.702,1.35-1.566C24.91,4.307,24.306,3.605,23.56,3.605z"/>
+	</g>
+</g>
+<g>
+	<g opacity="0.67"  a:adobe-blending-mode="multiply"  a:adobe-opacity-share="1">
+		<path fill="#66A135"  a:adobe-blending-mode="normal"  a:adobe-opacity-share="0" d="M23.86,12.625H4.05
+			c-0.747,0-1.351,0.702-1.351,1.567c0,0.864,0.604,1.565,1.351,1.565h19.81c0.746,0,1.35-0.701,1.35-1.565
+			C25.209,13.328,24.606,12.625,23.86,12.625z"/>
+	</g>
+	<g>
+		<path fill="#FFFFFF" d="M23.56,12.226H3.75c-0.747,0-1.351,0.702-1.351,1.567c0,0.864,0.604,1.565,1.351,1.565h19.81
+			c0.746,0,1.35-0.701,1.35-1.565C24.91,12.928,24.306,12.226,23.56,12.226z"/>
+	</g>
+</g>
+<g>
+	<g opacity="0.67"  a:adobe-blending-mode="multiply"  a:adobe-opacity-share="1">
+		<path fill="#66A135"  a:adobe-blending-mode="normal"  a:adobe-opacity-share="0" d="M23.86,21.247H4.05
+			c-0.747,0-1.351,0.701-1.351,1.566c0,0.864,0.604,1.566,1.351,1.566h19.81c0.746,0,1.35-0.702,1.35-1.566
+			C25.209,21.948,24.606,21.247,23.86,21.247z"/>
+	</g>
+	<g>
+		<path fill="#FFFFFF" d="M23.56,20.846H3.75c-0.747,0-1.351,0.701-1.351,1.566c0,0.864,0.604,1.566,1.351,1.566h19.81
+			c0.746,0,1.35-0.702,1.35-1.566C24.91,21.547,24.306,20.846,23.56,20.846z"/>
+	</g>
+</g>
+</svg>

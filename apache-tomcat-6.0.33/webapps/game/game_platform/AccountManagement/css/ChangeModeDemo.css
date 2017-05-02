@@ -1,0 +1,428 @@
+﻿html{
+	height:100%;
+	overflow: hidden;
+	font-family:"Microsoft YaHei",微軟雅黑,"Microsoft JhengHei";
+}
+body{
+	margin:0px;
+	height: 100%;
+	width:100%;
+}
+ul{
+	list-style-type: none;
+	padding:0px;
+	margin:0px;
+}
+li{
+	list-style-type: none;
+}
+
+.float-left{
+	float: left;
+}
+
+/*外層容器*/
+.wrap{
+	display: flex;
+justify-content:space-around;
+ width: 100%;
+ height:100%;
+ /*background: -webkit-radial-gradient(-20% -20%,farthest-side,#7FD530 30%,#008B3D);*/
+ background: #C7C7C7;
+
+}
+
+::-webkit-input-placeholder{
+	color:#555;
+}
+/***************/
+/*左半邊之班級欄位*/
+/****************/
+.classroom-list-wrap{
+	/*flex-grow:3;*/
+	width:25%;
+	height:100%;
+	padding-top: 100px;
+	box-sizing: border-box;
+	position: relative;
+	
+}
+#classroom-list-title{
+	background: #fff;
+	opacity:0.8;
+	height:58px;
+	font-size: 40px;
+	line-height: 55px;
+	text-align: center;
+	top: 42px;
+	position: absolute;
+	width: 100%;
+}
+
+.ul-wrap-classroom{
+	overflow-y: auto;
+	height:100%;
+	color: #eee;
+}
+.ul-wrap-classroom li:before {
+	position:absolute;
+	right:3px;
+	top:28px;
+    content:">";
+}
+.li-wrap-classroom{
+	position:relative;
+	box-sizing:border-box;
+	padding:13px;
+	padding-right: 30px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.li-wrap-classroom:not(.selected-classroom):hover{
+	background: rgba(0,0,0,0.3);
+}
+
+.class-name{
+	font-size: 30px;
+	text-align: left;
+}
+.class-other-info{
+	position:relative;
+	height:15px;
+	font-size: 14px;
+	color: #EEE;
+}
+.grade-year{
+	position:absolute;
+	left:0px;
+
+}
+.student-number{
+	position:absolute;
+	right:0px;
+}
+.selected-classroom{
+	background: rgba(255,255,255,0.5);
+	color:#111;
+	font-weight: bolder;
+}
+.selected-classroom .class-other-info{
+	color:#111;
+	font-weight: bolder;
+}
+/**********************************/
+
+
+/**********************/
+/*右半邊之顯示師生資訊欄位*/
+/**********************/
+.person-list-wrap{
+	/*flex-grow:7;*/
+	width:75%;
+	height:100%;
+	box-sizing:border-box;
+	padding-top: 100px;
+	
+}
+
+.area-for-tab{
+	position:relative;
+	
+}
+#toolbar{
+	position:absolute;
+	bottom:3px;
+	right:20px;
+	display: none;
+}
+#toolbar img{
+	cursor:pointer;
+	margin-right: 3px;
+	width:24px;
+	height:24px;
+	padding:3px;
+	border-radius: 50%;
+}
+#toolbar img:hover{
+	background:rgba(255,255,255,0.3);
+}
+
+.tab-host{
+	position:absolute;
+	bottom: 0px;
+	text-align:center;
+	color:#ddd;
+}
+.tab-host li{
+	float: left;
+	bottom:0;
+	width:150px;
+	height:30px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background: rgba(0,0,0,0.3);
+	font-size: 20px;
+	line-height: 30px;
+}
+li.selected-tab {
+	color: #000;
+ 	font-weight: bolder;
+ 	background: rgba(255,255,255,0.5);
+ 	box-shadow: 0px -2px 4px;
+}
+#teacher-tab{
+	
+}
+#student-tab{
+
+}
+
+.person-list-inner-wrap{
+	display: flex;
+	width:100%;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+}
+
+.in-class-person{
+	width:50%;
+	height:100%;
+	border-right: 1px solid #fff;
+	padding-top: 70px;
+	box-sizing:border-box;
+	
+}
+.in-class-person-title{
+	position:relative;
+	height: 0px;
+	text-align: center;
+	line-height: 70px;
+	border-bottom: 1px solid #fff;
+}
+.in-class-person-title-text{
+	height: 70px;
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+}
+.in-class-person-list-wrap{
+	overflow-y:auto;
+	height:100%;
+}
+.in-class-person-list{
+	
+}
+.in-class-person-list li{
+	display: flex;
+/*	justify-content:space-around;*/
+	padding:10px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+	height: 35px;
+
+}
+
+.list-high-light{
+	background: #A8D066;
+}
+
+.all-person{
+	width:50%;
+	height: 100%;
+	padding-top: 70px;
+	box-sizing:border-box;
+	
+}
+.all-person-title{
+	position:relative;
+	height: 0px;
+	text-align: center;
+	line-height: 70px;
+	border-bottom: 1px solid #fff;
+}
+
+.all-person-title-text{
+	height: 70px;
+	bottom: 0px;
+	position: absolute;
+	width:100%;
+}
+
+.all-person-list-wrap{
+	overflow-y:auto;
+	height:100%;
+}
+.all-person-list{
+	
+}
+.all-person-list li{
+	display: flex;
+/*	justify-content:space-around;*/
+	padding:10px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+	height: 35px;
+
+}
+
+
+/*人員資訊顯示方塊*/
+.person-checkbox{
+	/*flex-grow:1;*/
+	width:10%;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:26px;
+    height:26px;
+    margin:3px 0px 0 0;
+    vertical-align:middle;
+    background:url(../image/icon/unchecked_checkbox.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../image/icon/checked_checkbox.png) left top no-repeat;
+}
+
+.person-name{
+	height:30px;
+	/*flex-grow:5;*/
+	width: 25%;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px
+}
+.account-info{
+	width:100%;
+	display: flex;
+-webkit-justify-content: flex-start;
+}
+.person-info-box{
+	width: 70%;
+	height:30px;
+	/*flex-grow:10;*/
+	color:#333;
+}
+.account{
+	float: left;
+}
+.password{
+	float:left;
+}
+
+.edit-button{
+	/*flex-grow:1;*/
+	box-sizing:border-box;
+	cursor:pointer;
+	-webkit-user-select: none;
+	line-height: 30px;
+	max-width: 20px;
+}
+
+.edit-button:hover{
+	
+}
+
+/**********************/
+/*Search Field*/
+/**********************/
+.search{
+
+	display: flex;
+bottom: 25px;
+left: 50%;
+position: absolute;
+width: 100%;
+margin-left: 45px;
+height: 20px;
+background: url("../image/icon/icon_search.png") no-repeat;
+background-size: 16px;
+}
+.search img{
+	position: absolute;
+	height:16px;
+}
+.search input{
+	opacity:0;
+	position: absolute;
+	height:16px;
+	width:0px;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-bottom: 1px solid #111;
+	margin-left: 20px;
+	-webkit-transition: width 0.4s ease;
+}
+.search input:focus{
+	outline:none;
+	box-shadow: 0px 0px 0px rgba(255,255,255,0);
+}
+.search .left{
+	opacity:0;
+	position:absolute;
+	height:3px;
+	margin-left: 20px;
+	bottom: 2px;
+	border-right: 1px solid #111;
+	z-index: 2;
+	-webkit-transition: margin-left 0.4s ease;
+}
+.search .right{
+	opacity:0;
+	position:absolute;
+	height:3px;
+	margin-left: 27px;
+	bottom: 2px;
+	border-right: 1px solid #111;
+	z-index: 2;
+	-webkit-transition: margin-left 0.4s ease;
+}
+
+.search.active input{
+	opacity:1;
+	width:100px;
+}
+.search.active .right{
+	opacity:1;
+	margin-left: 127px;
+}
+.search.active .left{
+	opacity:1;
+}
+
+
+/*navbar*/
+div#navbar {
+	height: 42px;
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	width: 100%;
+	background: #A8D066;
+	background: -webkit-linear-gradient(top,#B4D467,#9DCC66);
+	background: linear-gradient(top,#B4D467,#9DCC66);
+}
+#navbar>a {
+	display: block;
+	width: 68px;
+}
+img.naviBtn {
+	width: 32px;
+	height: 32px;
+	padding: 4px 18px;
+	cursor: pointer;
+}
+
+/**針對全選*/
+div#selectAll {
+	width: 50px;
+	position: relative;
+	top: -70px;
+	cursor: pointer;
+	z-index: 20;
+}
+
+

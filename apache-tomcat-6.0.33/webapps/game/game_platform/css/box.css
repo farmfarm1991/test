@@ -1,0 +1,42 @@
+div#mainbox{
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+div#content{
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+div#loginbox{
+	display:-webkit-box;
+	-webkit-box-align:center;
+	/*-webkit-box-flex:1;*/
+}
+form#registerHere {
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	display: -webkit-box;
+}
+.oneinput, .finallayer, .extralayer{
+	display:-webkit-box;
+}
+.extralayer{
+	-webkit-box-pack:justify;
+}
+.oneinput > label, #qrcodebtn{
+	height:35px;
+}
+label{
+	display:block;
+}
+.oneinput > div, .finallayer > div{
+	-webkit-box-flex:1;
+	height:35px;
+}
+div > select, div > input, div > button{
+	-webkit-box-sizing:border-box;
+}
+.button_login{
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#C4FF8C), color-stop(0.09, #A3FF1D), to(#006E00));
+}

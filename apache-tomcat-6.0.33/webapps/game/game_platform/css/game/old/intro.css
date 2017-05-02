@@ -1,0 +1,342 @@
+﻿/*body{
+	overflow:hidden;
+	margin: 0;
+	font-family: 微軟正黑體;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.fullmain {
+	height:100%;
+	box-sizing:border-box;
+	display: none;
+}
+*/
+.fullmain[stage='1']{
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:-moz-box;
+	display:flex;
+}
+/*
+#imgArea {
+	height: 100%;
+	background-image:url("../images/background.png");
+	background-size: cover;
+	background-color: #DCDCDC;
+	box-sizing:border-box;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex:1;
+	flex:1;
+	-webkit-flex-direction:column;
+	flex-direction:column;
+}
+*/
+#imgbox {
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:-moz-box;
+	display:flex;
+	-webkit-flex:1;
+	-webkit-box-flex:1;
+	   -moz-box-flex:1;
+	        flex:1;
+	/*margin:10px 0px;*/
+}
+div[type='noimg'], div[type='hasimg'] {
+	/*display:-webkit-box;*/
+	width: 100%;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: flex;
+	-webkit-justify-content:center;
+	-webkit-box-pack:center;
+	   -moz-box-pack:center;
+	        justify-content:center;
+	-webkit-align-items:flex-start;
+	-webkit-box-align:start;
+	   -moz-box-align:start;
+	        align-items:flex-start;
+	-webkit-flex-direction:column;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	   -moz-box-orient:vertical;
+	   -moz-box-direction:normal;
+	        flex-direction:column;
+	/*-webkit-box-align: center;
+	-webkit-box-pack: center;
+	box-sizing: border-box;
+	-webkit-flex:1;
+	flex:1;*/
+}
+div[type=noimg] {
+	border: 7px dashed #848484;
+	-webkit-align-items:center;
+	  -webkit-box-align:center;
+	     -ms-flex-align:center;
+     -ms-grid-row-align:center;
+            align-items:center;
+	margin: 15px 15px 20px 15px;
+	border-radius: 10px;
+}
+
+
+#uploadbtn {
+	/*display: inline-block;
+	-webkit-flex-direction:column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;*/
+	background-image: url('../../edit/images/cardadd2.svg');
+	background-repeat: no-repeat;
+	height:100%;
+	/*background-size: 35%;*/
+	background-position: 50%;
+	width: 100%;
+	/*max-width: 400px;*/
+	/*position: absolute;*/
+/*	left: 0;
+	top: 0;*/
+}
+#uploadbtn>div {
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+	height: 100%;
+	background-image: url('../../edit/images/cardadd2.svg');
+	background-color: #DCDCDC;
+	display: none;
+}
+#uploadbtn>input {
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	opacity: 0;
+	position: relative;
+	/*top: 0px;*/
+	left: 0px;
+}
+
+#imgbox>div[type='noimg']>img {
+	display: none;
+}
+#imgbox>div[type='hasimg']>div {
+	position: absolute;
+	width: 45px;
+	height: 33px;
+	font-size: 20px;
+	line-height: 50px;
+	z-index: 2;
+	display: block;
+	background-image: none;
+	top: 70px;
+	left: 10px;
+}
+#imgbox>div[type='hasimg']>div>div {
+	/*background-color: transparent;*/
+	/*background-image: url('../images/remove2.svg');*/
+	background-image: url('../../edit/images/changeImg.png');
+	pointer-events:auto;
+	cursor: pointer;
+	display: block;
+	/*background-size: 100%; */
+	/*background-repeat: no-repeat;*/
+	border-radius: 3px;
+	/*background-image: url('../images/fullimg.png');*/
+	background-position-x: 5px;
+	background-position-y: 5px;
+	width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px;
+    position: fixed;
+    right: 15px;
+    /*top: 90px;*/
+}
+div#importEditCode:hover:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid #FFC36C;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid transparent;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -27px;
+    opacity: 1;
+}
+
+div#importEditCode:hover:after {
+    content: "輸入遊戲ID";
+    position: absolute;
+    width: 81px;
+    background-color: #FFC36C;
+    top: 14px;
+    right: 76px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 9px;
+    font-size: 16px;
+    text-align: center;
+}
+}
+#imgbox>div[type='hasimg']>div>div:active {
+	/*background-image: url('../images/remove_g.svg');*/
+}
+#imgbox>div[type='hasimg']>div>input {
+	visibility: hidden;
+	/*margin-top: -50px;*/
+}
+#typeDom[type='hasimg'] #cardimg {
+	-webkit-box-shadow: inset 150px 0px 150px -150px #393939, inset -150px 0px 150px -150px #393939;
+	        box-shadow: inset 150px 0px 150px -150px #393939, inset -150px 0px 150px -150px #393939;
+	display: block;
+}
+/*
+#imgbox>div#typeDom[type='hasimg']:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/mask.png');
+	position: absolute;
+	top: 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+*/
+#cardimg {
+	width: 100%;
+	height: 100%;
+/*	max-width: none;*/
+	/*cursor: move;*/
+/*	min-height: 100%;
+	min-width: 100%;*/
+	display: block;
+	max-height:100%;
+	max-width:100%;
+	-webkit-background-size: contain;
+	        background-size: contain;
+    background-position: 50%;
+	background-repeat: no-repeat;
+	display: none;
+}
+div#imgActive:hover:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid #FFC36C;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid transparent;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -27px;
+    opacity: 1;
+}
+
+div#imgActive:hover:after {
+    content: "更換圖片";
+    position: absolute;
+    width: 81px;
+    background-color: #FFC36C;
+    top: 14px;
+    right: 76px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 9px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+}
+
+
+#uploadTitle{
+	height:30px;
+	position:absolute;
+	font-weight: bolder;
+	font-size:20px;
+	margin: 30px;
+	display: none;
+}
+@media(orientation:landscape) {
+	html.ipad.ios7 > body{
+		position: fixed;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+#intro_NextBtn {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	bottom: 0px;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	        align-items: center;
+	/*margin: 20px;*/
+}
+#nextBtn{
+	/*float:right;*/
+	width: 100px;
+	height: 350px;
+	/*background-color:#92D050;*/
+	/*background-size: contain;*/
+	background-repeat: no-repeat;
+	/*background-position: 50%;*/
+	text-align:center;
+	font-size:18px;
+	line-height:40px;
+	font-weight:bold;
+	/*background-image: url('../images/nextBtn.png');*/
+	background-image: url('../../edit/images/fullimg.png');
+	background-position-x: -1525px;
+	background-position-y: -700px;
+	zoom:0.35;
+
+}
+#nextBtn:hover{
+	cursor:pointer;
+	/*border:1px solid #92D050;*/
+	border-radius:4px;
+	/*box-shadow:0 2px rgba(0,0,0,0.07);*/
+	/*box-sizing: border-box;*/
+	/*line-height: 38px;*/
+}
+#nextBtn[disabled]{
+	cursor:not-allowed;
+	-webkit-box-shadow:none;
+	        box-shadow:none;
+	opacity: 0.65;
+	pointer-events: none;
+	/*display: none;*/
+}
+#importEditCode{
+	background-image: url('../../edit/images/ic_archive_black_48dp_1x.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px;
+    cursor: pointer;
+}

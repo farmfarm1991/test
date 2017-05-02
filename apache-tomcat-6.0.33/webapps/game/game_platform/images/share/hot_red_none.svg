@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+]>
+<svg version="1.1" id="圖層_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="46px" height="52px" viewBox="0 0 46 52" enable-background="new 0 0 46 52" xml:space="preserve">
+<g>
+	<polygon fill="#800003" points="38.448,0.086 38.448,45.927 23,39.464 6.849,46.221 6.849,47.166 23,40.41 38.448,46.873 
+		39.15,47.166 39.15,46.221 39.15,0.086 	"/>
+	<polygon fill="none" points="26.007,18.46 22.999,11.087 19.991,18.46 12.048,19.042 18.132,24.182 16.231,31.915 22.999,27.718 
+		29.767,31.915 27.865,24.182 33.95,19.042 	"/>
+	<polygon fill="none" points="29.767,31.915 27.865,24.182 33.596,19.341 26.357,18.812 26.221,18.476 26.007,18.46 23.246,11.692 
+		20.342,18.812 12.459,19.389 18.132,24.182 18.121,24.228 18.483,24.533 16.748,31.596 22.999,27.718 	"/>
+	<polygon fill="#800003" points="18.132,24.182 16.231,31.915 16.748,31.596 18.506,24.465 	"/>
+	<polygon fill="#800003" points="23.246,11.692 22.999,11.087 19.991,18.46 12.048,19.042 12.459,19.389 20.342,18.812 	"/>
+	<polygon fill="#800003" points="33.596,19.341 33.95,19.042 26.007,18.46 26.147,18.794 	"/>
+	<path fill="#CF1E1B" d="M23,0.086H6.849v46.135L7.2,46.074l15.8-6.61l15.448,6.463V0.436v-0.35H23z M33.596,19.341l-5.73,4.84
+		l1.901,7.733l-6.768-4.197l-6.251,3.878l-0.516,0.319l1.889-7.687l0.011-0.046l-5.673-4.793l-0.411-0.347l7.942-0.582l3.008-7.374
+		l0.247,0.605l2.761,6.768l0.214,0.016l7.729,0.566L33.596,19.341z"/>
+</g>
+</svg>

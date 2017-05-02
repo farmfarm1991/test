@@ -1,0 +1,666 @@
+body{
+	margin: 0px;
+	background-color: #DCDCDC;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	width: 100%;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	overflow: hidden;
+	height:100%;
+}
+#mainarea {
+	width: 100%;
+	height: 100%;
+	overflow-x: auto;
+}
+#mainarea::-webkit-scrollbar {
+    height: 5px;
+    /*width: 10px;*/
+}
+#mainarea::-webkit-scrollbar-thumb {
+    height: 5px;
+    background: green;
+    /*width: 10px;*/
+}
+.navbar {
+	max-height: 42px;
+	margin-bottom: 0px;
+	position: static;
+
+}
+#sliders{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-transform: none;
+	-webkit-transition: top 300ms linear, width 100ms ease-in;
+	transition: top 300ms linear, width 100ms ease-in;
+	max-width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex:1;
+	flex:1;
+	top: 0 !important;
+	position: relative;
+	margin: 0px auto;
+	height:100%;
+
+}
+.slide, .cloneslide{
+	/*特別設定330，主要是讓裡面的圖片左右有間隔*/
+	width: 330px;
+	height: 225px;
+	box-sizing: border-box;
+	-webkit-flex: none;
+	flex: none;
+	-webkit-order:1;
+	order:1;
+}
+.slide>img {
+	z-index: 0;
+	margin-left:15px; 
+	margin-right: 15px;
+	width: 300px;
+	height: 225px;
+	background-color: white;
+
+}
+.cloneslide {
+	background-color: #9F3c3d;
+}
+.ui-draggable-dragging {
+	z-index: 2;
+	box-shadow: 3px 3px 5px black;
+}
+.none {
+	border: 2px dashed gray;
+	background-color: #DCDCDC;
+	background-image: url('img/add3.svg');
+	background-repeat: no-repeat;
+	width: 300px;
+	-webkit-order:2;
+	order:2;
+	cursor: pointer;
+}
+.dragin {
+	border: 8px dashed #6BB80F;
+}
+
+#leftbox, #rightbox{
+	display: none;
+}
+
+
+/**系統說明提示框CSS**/
+#stat_table {
+	display: -webkit-flex;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	top: 0px;
+	display: none;
+}
+#maskpage {
+	background: black;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	position: absolute;
+}
+#titlename {
+	border-bottom: 1px solid #AFAFAF;
+	text-align: center;
+	font-size: 18px;
+	line-height: 50px;
+	height: 50px;
+	background: #BABABA;
+	border-radius: 15px 15px 0px 0px;
+	/*margin-bottom: 20px;*/
+	color:black;
+}
+
+#waiting {
+	width: 400px;
+	height: 171px;
+	-webkit-align-items: center;
+	align-items:center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	margin: auto;
+	padding-top: 42px;
+	z-index: 1;
+	text-align: center;
+}
+#waiting>#titlename {
+	text-align: left;
+	padding-left: 20px;
+}
+#inside {
+	width: 100%;
+	height: 100px;
+	background-color: white;
+	border-radius: 0px 0px 15px 15px;
+	padding-top: 20px;
+}
+.numindex {
+	border-radius: 50%;
+	width: 20px;
+	-webkit-flex: 1;
+	flex: 1;
+	margin: -25px auto 5px;
+	text-align: center;
+	background-color: white;
+	color:black;
+}
+.svgouter {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: -225px;
+}
+/**tool box**/
+#AllToolsBtn {
+	position: fixed;
+	right: 10px;
+	top: calc(50% - 50px);
+	width: 50px;
+}
+
+.showtoolboxbtn, .gotoFullScreen, .addNewBlankSlider {
+	width: 40px;
+	height: 40px;
+	background: #EFEFEF;
+	border: 1px solid #B5B5B5;
+	padding: 5px;
+	margin-top: -2.5px;
+	pointer-events: auto;
+	z-index: 2;
+}
+.addNewBlankSlider {
+	background-image: url('img/addblank.svg');
+	background-position: 50%;
+	background-size: 40px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	border-bottom: none;
+}
+.gotoFullScreen {
+	background-image: url('img/fullscreen.svg');
+	background-position: 50%;
+	background-size: 40px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	border-top: none;
+	border-bottom: none;
+}
+.showtoolboxbtn {
+	background-image: url('img/editopen.svg');
+	background-position: 50%;
+	background-size: 40px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	border-top: none;
+}
+.addNewBlankSlider:active {
+	background-image: url('img/addblank_g.svg');
+}
+.gotoFullScreen:active {
+	background-image: url('img/fullscreen_g.svg');
+}
+.showtoolboxbtn:active {
+	background-image: url('img/editopen_g.svg');
+}
+.toolsfunction{
+	background-color: white;
+	height: 0px;
+	width: 100%;
+	overflow-y: hidden;
+	font-size: 12px;
+	z-index: 2;
+	transition: height 100ms ease-out;
+	-webkit-transition:height 100ms ease-out;
+	position: relative;
+}
+.noWChoiceSlide>.numindex {
+	background: rgb(149, 198, 71);
+	color: white;
+}
+
+/*****/
+.toolsBtnList{
+	border-bottom: 4px solid #333333;
+	height: 37px;
+	background: #F8F8F8;
+	box-shadow: 0px 0px 0px 1px #70B330
+}
+.toolsBtn{
+	float: left;
+	height: 27px;
+	/*width: 50px;*/
+	position: relative;
+	margin: 8px 2px 2px 2px;
+	background: #666666;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	line-height: 27px;
+	padding-left:43px;
+	cursor: pointer;
+	padding-right:5px;
+}
+.toolsBtn:first-child{
+	margin-left: 32px;
+}
+#imgBtn{
+	background-image: url('img/img_w2.svg');
+	background-position: 10px 4px;
+	background-repeat: no-repeat;
+}
+#videoBtn {
+	background-image: url('img/video_w2.svg');
+	background-position: 10px 4px;
+	background-repeat: no-repeat;
+}
+#webBtn {
+	background-image: url('img/web_w2.svg');
+	background-position: 10px 4px;
+	background-repeat: no-repeat;
+}
+.actBtn {
+	border-top: 3px solid #70B330;
+	border-left: 1px solid #70B330;
+	border-right: 1px solid #70B330;
+	height: 34px;
+	margin: 5px 2px 0px 2px;
+	background: white;
+	font-size: 16px;
+	color: black;
+
+}
+.actBtn#imgBtn {
+	background-image: url('img/img_b2.svg');
+}
+.actBtn#videoBtn {
+	background-image: url('img/video_b2.svg');
+}
+.actBtn#webBtn {
+	background-image: url('img/web_b2.svg');
+}
+#backtoview {
+	float: right;
+	width: 62px;
+	height: 27px;
+	background-color: #666666;
+	background-image: url('img/close.svg');
+	background-size: 90%;
+	background-position: 50%;
+	margin-right: 32px;
+	margin-top: 8px;
+	cursor: pointer;
+}
+.iframebox{
+	display: none;
+}
+.actFrame {
+	display: block;
+}
+#webBtnframe>div, #videoBtnframe>div, #imgBtnframe>div{
+	margin: 10px 32px 0px;
+}
+#webBtnframe>div>input , #videoBtnframe>div>input{
+	border: 2px solid #70B330;
+	width: 40%;
+}
+#imgBtnframe>div>input{
+	display: none;
+}
+#webBtnframe>div>.btn, #videoBtnframe>div>.btn, #imgBtnframe>div>.btn {
+	/*width: 10%;*/
+	box-sizing: border-box;
+	/*max-width: 111px;*/
+	height: 28px;
+	border-radius: 0px;
+	padding:3px 20px;
+}
+#imgBtnframe>#fileImgList {
+	box-sizing: border-box;
+	/*border: 1px solid #70B330;*/
+	/*height: 100px;*/
+	/*box-shadow: 0px 0px 0px 1px #70B330;*/
+}
+div>.eachFileImg {
+	width: auto;
+	
+}
+#WebImgList, #videoImgList, #fileImgList {
+	height: 110px;
+	white-space: nowrap;
+	overflow: auto;
+}
+#videoImgList::-webkit-scrollbar {
+	height: 5px;
+}
+#videoImgList::-webkit-scrollbar-thumb {
+	background-color: #70B330;
+}
+#fileImgList::-webkit-scrollbar {
+	height: 5px;
+}
+#fileImgList::-webkit-scrollbar-thumb {
+	background-color: #70B330;
+}
+.eachWebImg ,.eachVideoImg, .eachFileImg{
+	width: 130px;
+	height: 100px;
+	background: white;
+	box-sizing: border-box;
+	border: 2px #7B3 solid;
+	border-radius: 3px;
+	display: inline-block;
+	margin-right: 10px;
+
+	/*woody add**/
+	pointer-events: none;
+}
+.eachWebImg>#webImg ,.eachVideoImg>#videoImg{
+	width: 100%;
+	height: 75px;
+}
+.videoImgName, .webImgName {
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.eachFileImg>img {
+	height: 100%;
+	pointer-events: all;
+}
+.eachVideoImg>img {
+	pointer-events: all;
+}
+.eachWebImg>img {
+	pointer-events: all;
+}
+
+#imgBtnframe>#fileImgList.dragin {
+	border: 8px dashed #6BB80F;
+}
+/****/
+#studen_stat_table {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 11;
+	display: none;
+	top: 0px;
+	left:0px;
+}
+#maskpage {
+	background: black;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+}
+#maskpage+div {
+	position: absolute;
+	top: 0;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	height: 100%;
+	width: 100%;
+	min-width: 400px;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-align-items:center;
+	align-items:center;
+}
+#addmetadata{
+	margin-top: -42px;
+	width: 500px;
+	height: 400px;
+	max-height: 500px;
+	background: white;
+	border-radius: 15px;
+	box-shadow: 0px 0px 10px 5px #3C3C3C;
+}
+#titlename3,  #titlename2{
+	border-bottom: 1px solid #AFAFAF;
+	text-align: center;
+	font-size: 18px;
+	line-height: 48px;
+	height: 48px;
+	background: #BBBABA;
+	border-radius: 6px 6px 0px 0px;
+	/*margin-bottom: 20px;*/
+	color:black;
+	border-bottom: 2px solid #AFAFAF;
+}
+#allmetadata{
+	width: 100%;
+	height: 265px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: auto;
+}
+#examtitle, #examtime, #examnote, #examcreate, #examimgid, #selectYS, #selectGD {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 14px;
+}
+#examtitle>div, #examtime>div, #examnote>div,
+#examcreate>div, #examimgid>div, #selectYS>div, #selectGD>div {
+	float: left;
+	width: 80px;
+	text-align: center;
+	height: 28px;
+	line-height: 28px;
+}
+#examtime>div:after {
+	content: "分鐘";
+	position: absolute;
+	margin-left: 70px;
+}
+input[type="text"], input[type="url"] {
+	margin: 0px;
+	height: 28px;
+	border: 0px;
+	border-radius: 0px;
+	width: 100%;
+}
+#examtitle>input[type="text"], #examnote>input[type='text'] {
+	float: left;
+	width: 75%;
+	border: 1px solid;
+}
+#examtime>input[type="number"] {
+	float: left;
+	width: 50px;
+	border: 1px solid;
+	margin-left: 0px;
+	height: 28px;
+}
+
+#examcreate>span, #examimgid>span {
+	height: 28px;
+	display: block;
+	float: left;
+	line-height: 28px;
+	text-align: center;
+}
+#selectGD {
+	margin-bottom: 0px;
+}
+#yy, #ss, #gg, #dd {
+	float: left;
+	width: 147;
+}
+#OKbtn, #NObtn, #OKbtn2, #NObtn2 {
+	width: 90px;
+	height: 25px;
+	cursor: pointer;
+	text-shadow: none;
+	line-height: 25px;
+}
+#OKbtn, #OKbtn2 {
+	background: #6FBA2C;
+	border: 1px solid #68A832;
+}
+#NObtn, #NObtn2 {
+	background: #E6E6E6;
+	border: 1px solid #A5A5A5;
+}
+
+#msg {
+	display: none;
+	width: 320px;
+	height: 215px;
+	border: 2px solid #848484;
+	border-radius: 8px;
+}
+#msg.isOnlyMsg {
+	height: 156px;
+}
+#msgMain {
+	width: 100%;
+	height: 106px;
+	background-color: white;
+	font-size: 18px;
+	line-height: 32px;
+	text-align: center;
+	box-sizing:border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-align-items:center;
+	align-items:center;
+	-webkit-box-align: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	
+}
+.choicebox {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 58px;
+	border-top: 1px solid #E6E6E6;
+	background: white;
+	border-radius: 0px 0px 6px 6px;
+}
+.isWaitMsg>.choicebox,  .isOnlyMsg>.choicebox{
+	display: none;
+}
+.isOnlyMsg>#msgMain {
+	border-radius: 0px 0px 6px 6px;
+}
+.isWaitMsg>#msgMain {
+	border-radius: 0px 0px 6px 6px;
+	background-image: url('img/ql3.gif');
+	background-position: 50% 5px;
+	background-repeat: no-repeat;
+	height: 165px;
+	line-height: 75px;
+	-webkit-align-items:flex-end;
+	align-items:flex-end;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+.isAlert>.choicebox>#NObtn2 {
+	display: none;
+}
+.isAlert>.choicebox>#OKbtn2 {
+   	width: 50%;
+}
+
+/**input textarea*/
+#www {
+	border: 2px solid blue;
+	cursor: move;
+}
+
+/*hidden input file btn*/
+#hideinput{
+	width: 0px;
+	height: 0px;
+	visibility:hidden;
+	position: fixed;
+	top:0px;
+	left:0px;
+}
+/**移動newhelper CSS**/
+.newhelper {
+	z-index: 10;
+	margin-right: 0px;
+}
+.newhelper>.ui-resizable-se {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	right: -2px;
+	bottom: -3px;
+	background-color: beige;
+	cursor: se-resize;
+	pointer-events: all;
+}
+
+/**給投影片順序移動使用  已移除*/
+.canNotDragEvent{
+	pointer-events:none;
+}
+
+/**給投影片刪除使用*/
+.deleteSlide {
+	position: relative;
+	width: 19px;
+	height: 19px;
+	margin-right: 15px;
+	margin-top: -19px;
+	margin-left: 296px;
+	top: 19px;
+	background-color: white;
+	background-image: url('img/error.svg');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	cursor: pointer;
+	border-radius: 50%;
+	z-index: 1;
+}
+/*處理ios7在safari顯示時少20px的bug*/
+@media (orientation:landscape) {
+    html.ipad.ios7 > body {
+        position: fixed;
+        bottom: 0;
+        width:100%;
+        height: 672px !important;
+    }
+}
+
+/*處理hash跳轉功能*/
+.jumpIndex>img#webImg {
+    height: 100%;
+}
+
+.jumpIndex>.webImgName {
+    position: relative;
+    width: 15px;
+    margin-top: -19.1px;
+    margin-left: 3px;
+}
+
+.eachWebImg.jumpIndex {
+    width: 22px;
+    height: 22px;
+}

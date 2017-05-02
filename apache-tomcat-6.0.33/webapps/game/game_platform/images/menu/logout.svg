@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+]>
+<svg version="1.1" id="圖層_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+<path fill="#777878" d="M27.319,23.654c0,2.33-1.889,4.217-4.217,4.217H6.601c-2.328,0-4.216-1.887-4.216-4.217V6.821
+	c0-2.327,1.888-4.215,4.216-4.215h16.501c2.328,0,4.217,1.888,4.217,4.215V23.654z"/>
+<g>
+	<g opacity="0.75"  a:adobe-blending-mode="multiply"  a:adobe-opacity-share="1">
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#636464"  a:adobe-blending-mode="normal"  a:adobe-opacity-share="0" d="
+			M15.381,23.252c-3.823,0-7.042-3.076-7.042-7.049c0-2.577,1.432-4.773,3.479-6.002c1.398,0.387,0.995,1.783,0.865,2.142
+			c-1.213,0.856-2.027,2.244-2.027,3.864c0,2.713,2.115,4.768,4.724,4.768c2.609,0,4.725-2.055,4.725-4.768
+			c0-1.721-0.792-3.179-2.035-4.019c-0.13-0.543-0.273-1.833,1.188-1.975c1.987,1.231,3.338,3.421,3.338,5.99
+			C22.594,20.176,19.204,23.252,15.381,23.252z M15.519,16.947c-0.479,0-1.141-0.582-1.141-1.077V8.963
+			c0-0.07,0.01-1.113,1.104-1.113c0.479,0,1.105,0.261,1.105,1.113v6.907C16.588,16.365,15.995,16.947,15.519,16.947z"/>
+	</g>
+	<g>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M15.07,22.939c-3.823,0-7.042-3.078-7.042-7.049
+			c0-2.577,1.432-4.773,3.479-6.002c1.398,0.387,0.995,1.783,0.863,2.142c-1.209,0.856-2.024,2.244-2.024,3.864
+			c0,2.713,2.114,4.766,4.723,4.766c2.609,0,4.725-2.053,4.725-4.766c0-1.721-0.792-3.179-2.035-4.019
+			c-0.132-0.543-0.272-1.833,1.188-1.976c1.987,1.231,3.338,3.421,3.338,5.99C22.283,19.861,18.894,22.939,15.07,22.939z
+			 M15.208,16.635c-0.478,0-1.141-0.582-1.141-1.078V8.651c0-0.07,0.01-1.113,1.104-1.113c0.479,0,1.105,0.261,1.105,1.113v6.906
+			C16.277,16.053,15.685,16.635,15.208,16.635z"/>
+	</g>
+</g>
+</svg>

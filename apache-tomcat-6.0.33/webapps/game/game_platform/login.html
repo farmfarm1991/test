@@ -1,0 +1,1399 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- <meta name="viewport" content="width=device-width, user-scalable=2"/> -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=1">
+<!-- <link href="holiyo.ico?v=14.01.15" rel="Shortcut Icon" type="image/x-icon"> -->
+<link rel="shortcut icon" href="images/logo/icon.png"  type="image/png"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href='css/box.css' rel="stylesheet" />
+
+<title>Holiyo</title>
+
+<style type="text/css">
+html {
+	height: 100%;
+	width:100%;
+	margin: 0px;
+	/*background: url(images/background.png);*/
+}
+body {
+	height: 100%;
+	/*width:100%;*/
+	margin: 0px;
+	background:  url(images/background/bg3.png);
+	/*background-position:  0 0 ;*/
+	/*-webkit-animation-name: move;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count:infinite;*/
+	/*-moz-animation-name: move;
+	-moz-animation-duration: 11s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count:infinite;
+	-ms-animation-name: move;
+	-ms-animation-duration: 11s;
+	-ms-animation-timing-function: linear;
+	-ms-animation-iteration-count:infinite;*/
+	font-family: "Helvetica Neue","微軟正黑體",Helvetica,Arial,sans-serif;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	 -ms-flex-align: center;
+	     align-items: center;
+	-webkit-box-pack:center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	 -ms-flex-pack: center;
+	     justify-content: center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	overflow: hidden;
+}
+#movePic{
+	/*display: none;*/
+	/*background: cadetblue;*/
+    /*position: absolute;
+    width: 100%;
+    height: 508px;
+    bottom: 0;
+    left: 0;
+    background-position: 0px 0px;
+    -webkit-animation-name: move;
+    -webkit-animation-duration: 55s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: move;
+	-moz-animation-duration: 55s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count:infinite;
+	-ms-animation-name: move;
+	-ms-animation-duration: 55s;
+	-ms-animation-timing-function: linear;
+	-ms-animation-iteration-count:infinite;
+    background-image: url(images/background/street.png);
+    background-repeat: repeat-x;
+    zoom: 0.4;
+    z-index: -1;*/
+}
+div#peo {
+    /*background-image: url(images/background/peopler.gif);
+    width: 130px;
+    height: 178px;
+    position: absolute;
+    bottom: -11px;
+    right: 15%;
+    background-size: contain;*/
+}
+@keyframes move {
+	form{ background-position: 0px 0px; }
+	to { background-position: 4035px 0; }
+}
+@-webkit-keyframes move {
+	form{ background-position: 0px 0px; }
+	to { background-position: 4035px 0; }
+}
+@-moz-keyframes move {
+	form{ background-position: 0px 0px; }
+	to { background-position: 4035px 0; }
+}
+@-ms-keyframes move {
+	form{ background-position: 0px 0px; }
+	to { background-position: 4035px 0; }
+}
+div#mainbox {
+	width: 100%;
+	/*height: 345px;*/
+	/*background-color: #A1DE2D;*/
+	/*display: -webkit-box;*/
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	/*-webkit-box-pack:center;*/
+	-webkit-justify-content: center;
+	-webkit-box-pack: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+div#content {
+	width: 100%;
+	/*box-shadow: inset 0px 0px 0px 5px red;*/
+	height: 345px;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-webkit-box-pack: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	/*background: rgba(255, 255, 255, 0.23);*/
+}
+div#logobox {
+	background-image: url('images/logo/logo_animated_bigpic.png');
+	/*-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: slidein;
+    animation-name: slidein;*/
+    animation: slidein 2s steps(11) infinite;
+    -webkit-animation: slidein 2s steps(11) infinite;
+	height: 50%;
+	width: 400px;
+	background-repeat: no-repeat;
+	/*background-position: 50%;*/
+	zoom:0.5;
+	/*background-position-y: 5%;*/
+	position: relative;
+}
+@keyframes slidein {
+	70% {
+		background-position-x: 0px; 
+	}
+	100% { 
+		background-position-x: -4400px; 
+	}
+}
+div#loginbox{
+	height: 400px;
+	width: 0px;
+	min-height: 320px;
+	overflow: hidden;
+	-webkit-transition:all 300ms ease-out;
+	-moz-transition:all 300ms ease-out;
+	-ms-transition:all 300ms ease-out;
+	opacity: 0;
+	zoom: 0.9;
+}
+
+form#registerHere {
+	/*margin-top: 45px;*/
+	margin-left: 60px;
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: center;
+	-webkit-box-pack: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.oneinput, .finallayer, .extralayer,.toplayer {
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 5px 0px;
+}
+.extralayer {
+	display: none;
+	padding-left: 45px;
+	-webkit-justify-content: space-between;
+	-webkit-box-pack: justify;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: -10px;
+    position: relative;
+    width: 300px;
+}
+.extralayer>div {
+	width: 110px;
+	height: 30px;
+	border-radius: 5px;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	/*opacity: 0.5;*/
+	cursor: pointer;
+    zoom: 1.5;
+    position: absolute;
+}
+.toplayer{
+	padding-left: 90px;
+	margin-top: -62px;
+	width: 210px;
+	height: 50px;
+}
+.toplayer>div{
+	width: 86%;
+	height: 43px;
+	border-radius: 5px;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	/*opacity: 0.5;*/
+	cursor: pointer;
+    /*zoom: 1.5;*/
+    position: absolute;
+}
+.oneinput>label, #qrcodebtn {
+	width: 40px;
+	line-height: 35px;
+	text-align: center;
+	color: #404041;
+    font-weight: bold;
+}
+#ffbtn,#ggbtn{
+	width: 30px;
+	height: 30px;
+	margin: 4.5px 6.5px; 
+	opacity: 0.6;
+}
+#ffbtn:hover,#ggbtn:hover{
+	cursor: pointer;
+}
+#ffbtn{
+	background-image:url('images/svg/facebook-small-01.svg');
+}
+#ggbtn{
+	background-image:url('images/svg/google-small-01.svg');
+}
+.finallayer>label:nth-child(1){
+	margin-left: 30px !important;
+}
+#qrcodebtn {
+	background-image:url('images/svg/qrcode.svg');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	cursor: pointer;
+	/*box-shadow: inset 0px 0px 0px 2px salmon;*/
+	width: 25px;
+	height: 25px;
+	margin: 7.5px 12.5px; 
+	background-color:white; 
+	/*visibility: hidden;*/
+}
+#showqrcode {
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -535px;
+	margin-top: -250px;
+	/*background-image: url('images/login/login.png');*/
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	display: none;
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.5);
+	        box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.5);
+}
+#showqrcode > div {
+	text-align: center;
+	background-color: white;
+	font-size: 30px;
+	width: 300px;
+	height: 40px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -20px;
+	color:#83C703;
+	z-index: 1;
+}
+#showqrcode>img {
+	width: 90%;
+	position: absolute;
+	top: 0;
+	padding: 4%;
+}
+.oneinput>div, .finallayer>div {
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	   -moz-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+div>select, div>input, div>button {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	height: 33px;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	font-size: 16px;
+	padding: 4px 6px;
+	font-family: "微軟正黑體";
+	background: #E6E7E8;
+}
+div>input {
+	padding-left: 10px;
+}
+.button_login {
+	height: 40px;
+	border: 1px solid #854E2C;
+	font-size: 15px;
+	text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	color: #FFF;
+	background-image: -moz-linear-gradient(#CC3333 0%, #663333 9%);
+	background-image: -webkit-linear-gradient(#CC3333 0%, #663333 66.67%);
+	background-image: linear-gradient(#CC3333 0%, #663333 66.67%);
+	background-repeat: repeat;
+	background-position: 0% 0%;
+	cursor: pointer;
+	width: 87%;
+    margin-left: 13%;
+    margin-top: 24px;
+}
+div#fbbtn {
+	background-image: url('images/login_btn/facebook.svg');
+}
+div#googlebtn {
+	background-image: url('images/login_btn/google.svg') !important;
+    margin-top: 40px;
+}
+div#opidbtn {
+	/*background-image: url('images/login_btn/openID.svg') !important;*/
+	background-image: linear-gradient(#FFF23A 0%, #FDC60B 28.9%, #F28F3F 66.85%, #ED693C 88.76%, #E83E39 100%);
+	font-size: 16pt;
+    color: #404041;
+    border: 1px solid #808184;
+    text-align: center;
+    line-height: 43px;
+    font-weight: 600;
+    margin-left: 11px;
+    /*padding-left: 20px;*/
+    /*background-size: contain;*/
+    /*margin-top: 80px;*/
+}
+.choice {
+    position: absolute;
+    margin-top: -65px;
+    width: 200px;
+    left: 26px;
+}
+
+.loginform {
+    position: absolute;
+    top: 42%;
+}
+.logintext{
+    background-image: url('images/homepage title.png');
+    width: 350px;
+    height: 95px;
+    position: absolute;
+    top: calc(50% - 140px);
+    /*left: calc(50% - 175px);*/
+    margin-left: 55px;
+}
+
+.choice>input {
+    line-height: 20px;
+    height: 20px;
+    width: 83px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+.ob1,.ob2{
+	position: absolute;
+    padding-left: 67px;
+    background-image: url('images/icon/user_g.svg');
+    background-position-x: 0px;
+    background-size: 28px;
+    background-repeat: no-repeat;
+    line-height: 28px;
+    cursor: pointer;
+}
+.ob1{
+	margin-top: 15px;
+}
+.check{
+	background-image: url('images/icon/user_b.svg');
+	font-weight: bolder;
+}
+#hintText{
+	position: relative;
+    top: -6px;
+}
+#hintText:before{
+	content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid #424242;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    position: absolute;
+    top: 21px;
+    left: 7px;
+    opacity: 1;
+}
+#hintText:after{
+	content: "請選擇登入方式";
+    background-color: #424242;
+    padding: 5px 14px;
+    opacity: 1;
+    border-radius: 17px;
+    color: white;
+}
+#placard{
+	width:100%;
+	height:100%;
+	background-image: url(images/placard.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+}
+@media all and (max-width: 2000px) {
+	div#content {
+		height: 100%;
+		-webkit-box-orient:vertical;
+		-webkit-flex-direction: column;
+		-moz-box-orient: vertical;
+		-moz-box-direction: normal;
+		 -ms-flex-direction: column;
+		     flex-direction: column;
+		padding:0px 0px;
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+		        box-sizing:border-box;
+	}
+	div#mainbox {
+		height: 100%;
+		width: 350px;
+	}
+	.loginform{
+		top: 55%;
+	}
+}
+
+@media (max-width: 360px) {
+    div#mainbox {
+        height: 100%;
+        width: 300px;
+    }
+    /*div#content {
+        padding: 0px;
+    }*/
+    /*div#logobox {
+        zoom: 0.2;
+    }*/
+    .extralayer{
+    	margin-top: -100px !important;
+    }
+    /*form {
+        -webkit-transform: scale(1) translateX(-10px);
+        transform: scale(1) translateX(-10px);
+    }*/
+
+}
+@media (max-height: 620px) {
+	div#logobox{
+		top: -190px;
+	}
+	div#loginbox{
+	    position: absolute;
+	    top: calc(50% - 100px);
+    	min-height: 435px;
+	}
+	.logintext{
+		margin-top: -30px; 
+	}
+	.loginform{
+		margin-left: -10px;
+	}
+	div#opidbtn{
+		/*padding-left: 37px;*/
+	}
+}
+@media (max-height: 550px){
+	div#loginbox{
+		zoom: 0.8;
+	}
+}
+@media (max-height: 840px){
+	.logintext{
+		zoom: 0.8;
+		margin-left: 105px;
+	}
+}
+
+/*@media (max-height: 710px){
+	div#logobox{
+		zoom: 0.5;
+	}
+	#loginbox{
+    	zoom: 0.9;
+    }
+}*/
+/* blog css */
+div#leftBlog {
+	width: 80%;
+	height: 100%;
+    margin-left: 7%;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 55px;
+}
+div#blogName {
+    width: 100%;
+    position: absolute;
+    height: 50px;
+    top: 65px;
+    font-size: 23px;
+    color: #ffffff;
+}
+.sort {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: 300px;
+    /*-webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;*/
+}
+nav.labelT {
+    height: 80px;
+    width: 120px;
+    border: 4px solid #404041;
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 20px;
+    color: #404041;
+    /*opacity: 0.45;*/
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav.labelT.click{
+	color: #ffffff;
+    border: 4px solid #ffffff;
+    opacity: 1;
+}
+.sortContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /*-webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #242424;
+    letter-spacing: 2px;
+    /*margin-top: 30px;*/
+    margin-left: 40px;
+}
+.article {
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.artText>div {
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    background-position: 50%;
+    margin-right: 10px
+}
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #062D52;
+}
+.artText{
+	/*text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;*/
+}
+.more{
+	float: right;
+	margin-right: 5px;
+	color: #404041;
+	height: 40px;
+}
+.fbicon{
+	width: 135px;
+	height: 35px;
+	color:#073763;
+	font-size: 30px;
+	background-image: url('images/fb.png');
+	background-size: contain;
+    bottom: 5%;
+    background-repeat: no-repeat;
+    /*flex:1;*/
+    cursor: pointer;
+    text-decoration: none;
+}
+.fbtext{
+	padding-left: 50px;
+    width: 170px;
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: bold;
+}
+.qaicon{
+	width: 180px;
+	height: 35px;
+	color: #474748;
+	font-size: 30px;
+	background-image: url('images/qa.png');
+	background-size: contain;
+    bottom: 5%;
+    background-repeat: no-repeat;
+    /*flex:1;*/
+    cursor: pointer;
+    text-decoration: none;
+}
+.qatext{
+	padding-left: 50px;
+    width: 130px;
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: bold;
+}
+div#copyT {
+    width: calc(100% - 400px);
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    color: #212121;
+    font-size: 12px;
+    /*text-align: center;*/
+    /*left: 0px;*/
+    padding-left: 8%;
+    left: 7%;
+}
+#buttomTable{
+	position: absolute;
+    display: flex;
+    bottom: 35px;
+    width: calc(85% - 450px);
+    padding-left: 13%;
+    left: 7%;
+}
+#bodyArea{
+	height: 100%;
+	display: inline-flex;
+	width: 100%;
+	flex-direction: row-reverse;
+	max-height: 638px;
+	max-width: 1080px;
+	position: relative;
+}
+#bodyArea::-webkit-scrollbar{
+	width:2px;
+}
+#bodyArea::-webkit-scrollbar-thumb {
+   width: 0px;
+   background-color: rgba(0,0,0,0.498);
+}
+.fbicon2{
+	width: 190px;
+}
+/*@media all and (max-width: 1100px) {
+	.article {
+		width: 95%;
+	}
+	div#mainbox{
+		width: 350px;
+	}
+	.more{
+		height: 5px;
+	}
+}*/
+@media (max-width: 1000px){
+	#bodyArea{
+		overflow-x: hidden;
+		overflow-y: auto;
+		align-items: center;
+		-webkit-box-align:center;
+		-ms-flex-align:center;
+		flex-direction: column;
+		max-height: 100%;
+	}
+	div#leftBlog{
+		display: inline-table;
+		position: relative;
+		margin-left: 0%;
+	}
+	div#blogName{
+		top: -50px;
+		text-align: center;
+	}
+	#loginbox{
+    	left: calc(50% - 215px);
+    }
+	.sort{
+		flex-direction: row;
+		justify-content: center;
+		height: 50px;
+		position: relative;
+		width: 100%;
+
+	}
+	.sortContent{
+		position: relative;
+		padding-top: 40px;
+		margin-top: 30px;
+	}
+	#buttomTable{
+		position: relative;
+		padding-top: 70px;
+		width: 100%;
+		left: 0%;
+	}
+	div#mainbox{
+		position: relative;
+		display: inline-table;
+		width: 100%;
+	}
+	nav.labelT{
+		margin-right: 20px;
+	}
+	div#content{
+		background:none;
+	}
+	div#copyT{
+		width: 100%;
+		padding-left: 0px;
+		text-align: center;
+		left: 0%;
+	}
+	#loginbox>img{
+	    transform: rotate(90deg);
+	    top: 450px !important;
+	    right: 50% !important;
+	}
+}
+@media (max-width: 800px){
+	div#copyT{
+		bottom: 15px;
+	}
+	#buttomTable{
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 700px){
+	div#leftBlog{
+		zoom:0.8;
+	}
+	div#copyT{
+		bottom: 20px;
+	}
+}
+@media (max-width: 560px){
+	div#leftBlog{
+		zoom:0.7;
+	}
+	div#copyT{
+		bottom: 25px;
+	}
+}
+@media (max-width: 450px){
+	div#leftBlog{
+		zoom:0.6;
+	}
+	div#copyT{
+		bottom: 30px;
+	}
+	#buttomTable{
+		zoom:0.7;
+	}
+	.fbtext{
+		width: 200px;
+	}
+	.fbicon{
+		width: 180px;
+	}
+	.fbicon2{
+		width: 265px;
+	}
+}
+/*@media all and (max-height: 350px) {
+	div#logobox {
+		zoom: 0.3;
+	}
+	div#loginbox{
+		zoom: 0.7;
+	}
+}*/
+</style>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="../js/qrcode.min.js"></script>
+<script type="text/javascript" src="../js/lang.js"></script>
+<script src="http://connect.facebook.net/zh_TW/all.js"></script>
+<script type="text/javascript" src="../js/iTS5Dialog.js"></script>
+</head>
+<body>
+<div id="bodyArea">
+
+<div id="movePic">
+	<div id="peo"></div>
+</div>
+<div id='mainbox'>
+	<div id='content'>
+		<div id='logobox'></div>
+		<div id='loginbox'>
+			<!-- <img src="images/loginLine.png" style="position: absolute;right: 400px;height: 371px;top: calc(50% - 185px);"> -->
+		<!-- <div id='logobox'></div><div style="font-size: 38px;position: absolute;left: 38%;bottom: 17%;color: #8D2727;font-weight: 700;letter-spacing: 5px;">密逃遊戲 翻轉平台</div> -->	
+			<div class="logintext"></div>
+		  	<div class="loginform">
+			  	<!--<div class="choice">
+			  		<span id="hintText"></span>
+				    <input type="radio" id="ob1" name="class" value="0" style="display: none;">
+				    	<label for="ob1" class="ob1">免費使用</label><br>
+				    <input type="radio" id="ob2" name="class" value="1" checked  style="display: none;">
+				    	<label for="ob2" class="ob2 check" style="margin-top:45px;">直接登入</label><br>
+			  	</div>-->
+			  	<div  class='toplayer'>
+			  		<div id='opidbtn'><img src='images/logo/openid_logo.svg' style="left: -10px;position: relative;top:6px">使用OPEN ID登入</div>
+			  	</div>
+				<form method='post'  id="registerHere" action='login_chk.jsp'>
+					<div class='oneinput' id='aboutAccount'>
+						<label id='accountLabel' class='text'>帳號</label>
+						<div>
+							<input type="text" class="input-style" id="user_id" name="user_id" placeholder="example@example.com" required>
+						</div>
+					</div>
+					<div class='oneinput' id='aboutPassword'>
+						<label id="passwordLabel" class="text" hint="輸入密碼">密碼</label>
+						<div>
+							<input type="password" class="input-style" id="user_pwd" name="user_pwd" autocomplete="off" required>
+						</div>
+					</div>
+					<div style="line-height: 20px;height: 20px;text-align: right;"><input type="checkbox" id="rmbUser" style="width: 20px;height: 20px;margin-left: 40px;color: #414141;vertical-align: middle;">記住我</div>
+					<div class='oneinput' id='aboutLanguage'>
+						<label id="languageLabel" class="text">語系</label>
+						<div>
+							<select id="langSelect" name="langSelect">
+								<option type='zh-TW' selected="selected">繁體中文</option>
+								<option type='zh-CN'>简体中文</option>
+								<option type='en-US'>English</option>
+								<option type='ja-JP'>日本語</option>
+							</select> 
+						</div>
+					</div>
+					<div class='finallayer'>
+						<!-- <label id='ffbtn'></label>
+						<label id='ggbtn'></label>
+						<label id='qrcodebtn'></label> -->
+						<div>
+							<button class="button_login text" type="submit" id='big_button_login' onclick="saveUserInfo()">登入</button>
+						</div>
+					</div>			
+				</form>
+			</div>
+			<div id="fb-root"></div>
+			<div class='extralayer'>
+				<div id='fbbtn'></div>
+				<div id='opidbtn'></div>
+				<div id='googlebtn'>
+					<!-- <div id="custom_google_btn" class="g-signin customGPlusSignIn">
+				        <span class="icon"></span>
+				        <span class="buttonText"></span>
+				    </div> -->
+				</div>
+			</div>
+		<div id='showqrcode'>
+			<!-- <div>http://ppt.cc/0fg0</div> -->
+		</div>
+	</div>
+</div>
+</div>
+<div id="leftBlog">
+	<!-- <div id="blogName">宏鼎部落格</div> -->
+	<div class="sort">
+		<nav class="labelT" onclick="readNews(3,17)">密逃課堂案例</nav>
+		<nav class="labelT" onclick="readNews(4,17)">師生互動案例</nav>
+		<nav class="labelT" onclick="readNews(3,18)">密逃應用技巧</nav>
+		<nav class="labelT click" onclick="readNews(19,20)">科技化教學</nav>
+	</div>
+	<div class="sortContent">
+		<div class="article">
+			<div class="title"></div>
+			<div class="artText"></div>
+		</div>
+		<div class="article">
+			<div class="title"></div>
+			<div class="artText"></div>
+		</div>
+	</div>
+	<div id="buttomTable">
+		<a class='fbicon' href="https://www.facebook.com/HDeduTech/?fref=ts" target='_blank'><div class="fbtext" >宏鼎資訊</div></a>
+		<a class='fbicon fbicon2' href="https://www.facebook.com/groups/flipNescape/?fref=ts" target='_blank'><div class="fbtext">翻轉樂．密逃趣</div></a>
+		<a class='qaicon' href="http://www.hdtedu.com/support_Holiyo.php" target='_blank'><div class="qatext">疑難排解</div></a>
+	</div>
+	<div id="copyT">本平台感謝臺南市資訊教育輔導團楊易霖、陳秀梅老師協助設計     相關智慧財產權為宏鼎資訊股份有限公司所有</div>
+</div>
+</body>
+<script>
+//FB登入
+/*window.fbAsyncInit = function() {
+	FB.init({
+	  appId      : '1179676478739915',
+	  xfbml      : true,
+	  version    : 'v2.6'
+	});
+};
+(function(d, s, id){
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/zh-TW/all.js";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+var exUserName;
+var exUserEmail;
+var exUserPic;
+var exUserID;
+var exSchool_id;
+$("#fbbtn").click(function () {
+	FB.login(function (response) {
+		if (response.authResponse) {
+			FB.api("/me?fields=name,email,picture", function(response) {
+				debugger;
+		        exUserName = response.name;
+		        exUserEmail = response.email;
+		        exUserPic = response.picture.data.url;
+		        exUserID = response.id;
+		        exSchool_id = "FB";
+		      	console.log('exUserName: '+exUserName+' exUserEmail: '+exUserEmail+' exUserPic: '+exUserPic+' exUserID: '+exUserID);
+		      	checkExUser();
+			});
+		}
+		else {
+			alert("須同意應用程式才能進入此頁面");//不同意此應用程式
+		}
+	},{ scope: 'email,public_profile' });
+});
+//G+登入
+var gflag = 0;
+(function() {
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/client:plusone.js?onload=render'; 
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+function render() {
+    gapi.signin.render('googlebtn', {
+        'callback': 'signinCallback',
+        'approvalprompt': 'auto',
+        'clientid': '1077175666153-aci41c1qfisgd2bsfi06d734c1707n32.apps.googleusercontent.com',
+        'cookiepolicy': 'single_host_origin',
+        'requestvisibleactions': 'http://schemas.google.com/AddActivity',
+        'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email',
+    });
+}
+function signinCallback(authResult) {
+    if (authResult) {
+        // 是否有错
+        if(authResult["error"]==undefined){
+            // 加载api
+            gapi.client.load('plus','v1', function(){
+				var request = gapi.client.plus.people.get({
+					'userId': 'me'
+				});
+				request.execute(function(resp) {					
+            	debugger;
+					exUserName = resp.displayName;
+					if(exUserName==""){
+						exUserName = "G+使用者";
+					}
+					exUserEmail = resp.emails[0].value;
+					exUserPic = resp.image.url;
+					exUserID = resp.id;
+					exSchool_id = "GOOGLE";
+					if(gflag){
+						checkExUser();
+					}
+				});
+			});
+        }
+    }
+}
+$('#googlebtn').click(function () {
+	gflag = 1;
+});*/
+//openID登入
+$('#opidbtn').click(function(){
+	location.replace('http://odata.tn.edu.tw/ebooktagapi/openid/index3?urlFrom=holiyo');
+});
+function checkExUser(){
+	$.ajax({
+		type:'POST',
+		url:'loginExternalchk.jsp',
+		data:{
+			exUserName:exUserName,
+			exUserEmail:exUserEmail,
+			exUserPic:exUserPic,
+			exUserID:exUserID,
+			school_id:exSchool_id,
+			mainRoleID:'external',
+		}
+	}).done(function(evt){
+		debugger;
+		if(evt.trim()=="dayline"){
+			location.replace("error.jsp?eid=dayline");
+		}else if(evt.trim()=="E009" && exSchool_id == "FB"){
+			location.replace("error.jsp?eid=E009");
+		}else if(evt.trim()=="E009" && exSchool_id == "GOOGLE"){
+			location.replace("error.jsp?eid=E009");
+		}else{
+			$.cookie('tin', '1', { path:'/game/game_platform'});
+			location.replace("edit/firstEdit.jsp");
+		};
+	});
+}
+var serverSchoolInfo;
+var serverLanguageInfo;
+$("document").ready(function(){
+	// 顯示公告
+	//openAlert();
+	// 判斷host
+	// if (location.hostname != "www.holiyo.com.tw") {
+	// 	location.href = "http://www.holiyo.com.tw/game";
+	// }
+	loadserverInfo();
+	$('#schoolSelect').change( schoolChange );
+	$('#langSelect').change( langChange );
+	$('#qrcodebtn').bind('click', clickQRcode);
+	new QRCode(document.getElementById("showqrcode"), location.href);
+	if ($.cookie("rmbUser") == "true") {
+        $("#rmbUser").attr("checked", true);
+        $("#user_id").val($.cookie("userName"));
+        $("#user_pwd").val($.cookie("guid"));
+    }
+	// setTimeout(function(){
+	// 	$('#logobox').css({'opacity':'1'});
+	// },2000);
+	$('.labelT.click').click();
+});
+$("#rmbUser").click(function(){
+	if($("#rmbUser").prop('checked')!=true){
+        $("#user_pwd").val("");
+	}
+});
+function loadserverInfo() {
+	$.get("serverInfo.jsp?login=default&type=school_language",function(datas){
+		var schoolInfo =  datas.trim().split('|')[0];
+		var languageInfo =  datas.trim().split('|')[1];
+		serverSchoolInfo = schoolInfo.split(',');
+		serverLanguageInfo = languageInfo.split(',');
+		loadschoolInfo();
+
+		//檢查是否只有一個然後要隱藏起來
+		hideSelect();
+	});
+}
+function loadschoolInfo() {
+	$.get("../service/info/getSchoolInfo",function(datas){
+		if(datas.stat=="ok"){
+			var data = Array();
+			(!datas.data.length) ? data.push(datas.data) : data = datas.data;
+			for(var i=0; i<data.length; i++){
+				var obj = data[i];
+				var val = obj.school_id;
+				for(si = 0; si<serverSchoolInfo.length; si++) {
+					var oneSchool = serverSchoolInfo[si];
+					var a = oneSchool.split(':')[0];
+					var b = oneSchool.split(':')[1];
+					if(val != a) {
+						continue;
+					}
+					else {
+						var text = obj.school_name;
+						if(b == undefined) {
+							b = text;
+						}
+
+						$("#schoolSelect").append(
+							$('<option></option>').val(val).html(b)
+						);
+					}
+				}
+			}
+			$("#schoolSelect").append(
+				$('<option></option>').val("TEST").html("TEST國小")
+			);
+			//選擇cookie中的學校
+			checkCookieSchool();
+			//選擇cookie中的語言
+			checkCookieLanguage();
+		}
+	});
+}
+function readNews(sub1,sub2){
+	$('.article .artText').text("");
+	$('.article .title').text("");
+	$('.article .artText>div').remove();
+	if ($(event.target).is(".labelT")) {
+		$('.labelT.click').removeClass('click');
+		$(event.target).addClass('click');
+	}
+	$('.article a').remove();
+	$.ajax({
+		url:'http://blog.hdtedu.com/test.php',
+		type:'get',
+		data:{
+			op1:sub1,
+			op2:sub2
+		}
+	}).done(function(evt){
+		 debugger
+	 	var blogTitle = "";
+	 	var blogNum = 0;
+		for (var i = 1; i <= evt.split('@@@').length-1; i++) {
+			// console.log(evt.split('@@@')[i].split('|||')[0]);//title
+			// console.log(evt.split('@@@')[i].split('|||')[1].split('€€€')[0]);//content
+			// console.log(evt.split('@@@')[i].split('€€€')[1].split('§§§')[0]);//URL
+			// console.log(evt.split('@@@')[i].split('§§§')[1]);//imgURL
+			if (blogTitle != evt.split('@@@')[i].split('|||')[0]) {
+				blogTitle = evt.split('@@@')[i].split('|||')[0];
+				$($('.article .title')[blogNum]).text(blogTitle);
+				var text_origin = $($('.article .artText')[blogNum]).html(evt.split('@@@')[i].split('|||')[1].split('€€€')[0]).text();
+				// text_origin = halfToFull(text_origin);
+				if (text_origin != "") {
+					var url = evt.split('@@@')[i].split('€€€')[1].split('§§§')[0];
+					text_origin = text_origin.substr(0,80)+" ...";
+					$($('.article')[blogNum]).append("<a href="+url+" target='_blank' class='more'>more</a>");
+					$($('.article .artText')[blogNum]).text(text_origin);
+					$($('.article .artText')[blogNum]).prepend("<div style='background-image:url("+evt.split('@@@')[i].split('§§§')[1]+")'>");
+					blogNum++;
+				}
+			}
+			
+		}
+		console.log(evt);
+	});
+}
+function halfToFull(str)
+{
+    var value = str || "";
+    var result = "";
+    if (value)
+    {
+        for (i = 0; i <= value.length; i++)
+        {
+            if (value.charCodeAt(i) == 32) //空格
+                result += String.fromCharCode(12288);
+            else if (value.charCodeAt(i) <= 126 && value.charCodeAt(i) >= 33)
+                result += String.fromCharCode(value.charCodeAt(i) + 65248);
+            else if(value.charCodeAt(i) == 94)//"︿"
+                result += String.fromCharCode(65087);//"^"
+            else
+                result += String.fromCharCode(value.charCodeAt(i));
+        }
+    }
+    return result;
+}
+function checkCookieSchool() {
+	var school_id = $.cookie('school_id');
+	var find = 0;
+	var firstSchool ;
+	for(var si = 0; si<serverSchoolInfo.length; si++) {
+		if(si == 0)
+			firstSchool = serverSchoolInfo[si].split(':')[0];
+		if(school_id == serverSchoolInfo[si]) {
+			//找到cookie中有符合正確的學校
+			$("#schoolSelect>option[value="+school_id+"]").attr('selected','selected');
+			find = 1;
+			return;
+		}
+	}
+	if(find == 0) {
+		$("#schoolSelect>option[value="+firstSchool+"]").attr('selected','selected');
+		$.cookie('school_id', firstSchool, { path:'/iTS5'});
+		$.cookie('school_id', firstSchool, { path:'/'});
+	}
+}
+function checkCookieLanguage() {
+	var language = $.cookie('leng');
+	if(language != null && language != undefined) {
+		$("#langSelect>option[type="+language+"]").attr('selected','selected');
+		testLang(language);
+	}
+	else {
+		testLang('zh-TW');
+		$.cookie('leng', 'zh-TW', { path:'/iTS5'});
+		$.cookie('leng', 'zh-TW', { path:'/'});
+	}
+}
+function hideSelect(){
+	/*
+	if(serverSchoolInfo.length == 1){
+		$('#aboutSchool').hide();
+	}
+	*/
+	if(serverLanguageInfo.length == 1) {
+		$('#aboutLanguage').hide();
+	}
+
+	addAnimation();
+}
+function addAnimation(){
+	//加入動畫效果
+	setTimeout(function (){
+		$('#loginbox').width(450);
+		setTimeout(function () {
+			$('#loginbox').css('opacity','1');
+		}, 80)
+	}, 1000);
+}
+function schoolChange(evt) {
+	var school_id = $('#schoolSelect').val();
+	//設定回cookies
+	$.cookie('school_id', school_id, { path:'/iTS5'});
+	$.cookie('school_id', school_id, { path:'/'});
+}
+function langChange(evt) {
+	var newlanguage = $('#langSelect>option:selected').attr('type');
+	testLang(newlanguage);
+	$.cookie('leng', newlanguage, { path:'/iTS5'});
+	$.cookie('leng', newlanguage, { path:'/'});
+}
+function clickQRcode() {
+	var tempZoom = Math.min($('body').width(),$('body').height());
+	tempZoom = tempZoom/500;
+	//$('#showqrcode').css('zoom',tempZoom);
+	//display: block; transform: scale(1.36);
+	$('#showqrcode').attr('style','-webkit-transform:scale('+tempZoom+');-moz-transform:scale('+tempZoom+'); transform:scale('+tempZoom+');');
+	$('#showqrcode').css('display','block');
+	$('#showqrcode').bind('click',function(){
+		$('#showqrcode').css('display','none');
+		$('#showqrcode').unbind('click');
+	});
+}
+// choice filter
+$('.ob1').bind('touchend click',function(evt){
+	$('.loginform>form').css('display','none');
+	$('.extralayer').css('display','flex');
+	$('.ob2').removeClass("check");
+	$('.ob1').addClass("check");
+})
+$('.ob2').bind('touchend click',function(evt){
+	$('.loginform>form').css('display','flex');
+	$('.extralayer').css('display','none');
+	$('.ob1').removeClass("check");
+	$('.ob2').addClass("check");
+	
+})
+$('#ffbtn').click(showStopLoginMsg);
+$('#ggbtn').click(showStopLoginMsg);
+function showStopLoginMsg(){
+	var detailTemp = '<div style="width:100%;height:99%;background-image: url('+'images/public.png'+');background-size:contain;">\
+					</div>\
+					';
+
+
+	iTS5Dialog.myHtmlObject({'html':detailTemp,
+							 'type':'Alert',
+							 'width':'800px', 
+							 'height': '450px',
+							 'title':'公告'
+							});
+	$('#myMsgMain').css({'display':'inline-block','height':'78.6%','width':'100%','flex':'1','-webkit-box-flex':'1;','-webkit-flex':'1','-ms-flex':'1'});
+	$('.isAlert').css({'display':'-webkit-box','display':'-webkit-flex','display':'-ms-flexbox','display':'flex','-webkit-box-orient': 'vertical','-webkit-box-direction': 'normal','-webkit-flex-direction': 'column','-ms-flex-direction': 'column','flex-direction': 'column'});
+	$($('.isAlert>.choicebox>.sysinfo')[0]).text("關閉").css("width","20%");
+	$('#tableCell .choicebox>#OKBtn').css('width','200px');
+	resizeScreen();
+}
+function openAlert(evt){
+	var detailTemp = '<div id="placard" >\
+					</div>\
+					';
+
+
+	iTS5Dialog.myHtmlObject({'html':detailTemp,
+							 'type':'Confirm',
+							 'width':'800px', 
+							 'height': '450px',
+							 'title':'公告'
+							});
+	$('#myMsgMain').css({'display':'inline-block','height':'78.6%','width':'100%','flex':'1','-webkit-box-flex':'1;','-webkit-flex':'1','-ms-flex':'1'});
+	$('.isAlert').css({'display':'-webkit-box','display':'-webkit-flex','display':'-ms-flexbox','display':'flex','-webkit-box-orient': 'vertical','-webkit-box-direction': 'normal','-webkit-flex-direction': 'column','-ms-flex-direction': 'column','flex-direction': 'column'});
+	$($('.isAlert>.choicebox>.sysinfo')[1]).text("關閉");
+	$('#tableCell .choicebox>#OKBtn').text("前往教育版").css('margin','0px 270px 0px 20px');
+	//$('#tableCell .choicebox>#OKBtn').text("確認").width('20%');
+	$($('.isAlert>.choicebox>.sysinfo')[0]).bind('click',function(){
+		location.href = "http://holiyo.tn.edu.tw/game/game_platform/login.html";
+		// location.href = "http://hdtech.com.tw/game/game_platform/login.html";
+	})
+	resizeScreen();
+}
+window.onresize = function(event){
+	resizeScreen();
+}
+function resizeScreen (argument) {
+	var windowW = $(window).width();
+	if (windowW >= 800) {
+		$("#msg").css({"width":"800px","height":"450px"});
+		// $('#tableCell .choicebox>#OKBtn').text("前往教育版").css('margin','0px 270px 0px 20px');
+	}else{
+		$("#msg").css({"width":"320px","height":"180px"});
+		// $('#tableCell .choicebox>#OKBtn').text("前往教育版").css('margin','0px 10px 0px 20px');
+	}
+}
+function saveUserInfo() {
+    if ($("#rmbUser").prop("checked") == true && $.cookie("userName") == $("#user_id").val()) {
+    	debugger
+        $.cookie("rmbUser", "true", { expires: 7 });
+        $.cookie("userName", $.cookie("userName"), { expires: 7 });
+        $.cookie("guid", $.cookie("guid"), { expires: 7 });
+    }else if( $("#rmbUser").prop("checked") == true && ($.cookie("guid") == null || $.cookie("userName") != $("#user_id").val())){
+    	var userName = $("#user_id").val();
+        var guid = S4()+'-'+S4();
+        $.cookie("rmbUser", "true", { expires: 7 });
+        $.cookie("userName", userName, { expires: 7 });
+        $.cookie("guid", guid, { expires: 7 });
+    }
+    else {
+        $.cookie("rmbUser", "false", { expires: -1 });
+        $.cookie("userName", '', { expires: -1 });
+        $.cookie("guid", '', { expires: -1 });
+    }
+}
+function S4() {
+	return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+}
+</script>
+</html>

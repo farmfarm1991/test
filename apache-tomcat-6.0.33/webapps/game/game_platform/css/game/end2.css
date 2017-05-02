@@ -1,0 +1,485 @@
+﻿.fullmain[stage='4']{
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:-moz-box;
+	display:flex;
+}
+.pagebtn{
+	height:30px;
+	width: 100px;
+	position:absolute;
+	background-color:#404040;
+	cursor:pointer;
+	border-radius: 25px;
+	padding: 5px;
+	-webkit-box-shadow: 0px 0px 3px 2px #999;
+	        box-shadow: 0px 0px 3px 2px #999;
+	text-align: end;
+	line-height: 30px;
+	bottom: 100px;
+    color: white;
+    font-size: 19px;
+    letter-spacing: 5px;
+    z-index: 1;
+}
+#winerPage{
+	left: calc(50% - 160px);
+}
+#loserPage{
+	right: calc(50% - 160px);
+}
+.pagebtnOpen{
+  background: #7f7f7f;
+}
+.pagebtnUse{
+  background: #404040;
+}
+.pagebtnClose{
+  background: #d9d9d9;
+  pointer-events: none;
+}
+.bottomBar {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    background: rgba(245, 245, 245, 0.8);
+}
+.timebar{
+    width: calc(100% / 3);
+    height: 60px;
+    /* background: rebeccapurple; */
+    line-height: 100px;
+    position: absolute;
+    left: calc(50% - 150px);
+    bottom: 25px;
+    opacity: 0.4;
+}
+timeicon{
+	position: absolute;
+    width: 75px;
+    height: 75px;
+	background-image: url('../../edit/images/newImg/endIcon.png');
+    pointer-events: none;
+    background-position-x: -75px;
+}
+restart{
+	position: absolute;
+    width: 75px;
+    height: 75px;
+	background-image: url('../../edit/images/newImg/endIcon.png');
+    pointer-events: none;
+    margin-left: 15px;
+}
+.timeText{
+	position: relative;
+	margin-left: 90px;
+    top: -20px;
+    font-size: 44px;
+    color: #FF0000;
+    font-weight: bold;
+}
+#prevBtn{
+	float:right;
+	width:18px;
+	height: 100%;
+	/*background-color:#92D050;*/
+	-webkit-background-size: contain;
+	        background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	text-align:center;
+	font-size:18px;
+	line-height:40px;
+	font-weight:bold;
+	background-image: url('../../edit/images/nextBtn.png');
+}
+#prevBtn:hover{
+	cursor:pointer;
+	/*border:1px solid #92D050;*/
+	border-radius:4px;
+	-webkit-box-shadow:0 2px rgba(0,0,0,0.07);
+	        box-shadow:0 2px rgba(0,0,0,0.07);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	line-height: 38px;
+}
+#end_NextBtn{
+	position: absolute;
+	right: 10px;
+	top: 40px;
+	height: 100%;
+}
+#prevBtn {
+	background-image: url('../../edit/images/prevBtn.png');
+}
+#end_PrevBtn {
+	position: absolute;
+	left: 10px;
+	top:0px;
+	height: 100%;
+}
+.imgBox{
+	overflow: auto;
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:-moz-box;
+	display:flex;
+	-webkit-flex:1;
+	-webkit-box-flex:1;
+	   -moz-box-flex:1;
+	        flex:1;
+	display: none;
+}
+div[type='noimg'], div[type='hasimg'] {
+	/*display:-webkit-box;*/
+	width: 100%;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: flex;
+	-webkit-justify-content:center;
+	-webkit-box-pack:center;
+	   -moz-box-pack:center;
+	        justify-content:center;
+	-webkit-align-items:flex-start;
+	-webkit-box-align:start;
+	   -moz-box-align:start;
+	        align-items:flex-start;
+	-webkit-flex-direction:column;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	   -moz-box-orient:vertical;
+	   -moz-box-direction:normal;
+	        flex-direction:column;
+	cursor: pointer;
+	-webkit-background-size: contain;
+	        background-size: contain;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+div[type=noimg] {
+	-webkit-align-items:center;
+	-webkit-box-align:center;
+	   -moz-box-align:center;
+	        align-items:center;
+	margin: 15px 15px 0px 15px;
+	border-radius: 10px;
+	/*background-image: url('../../edit/images/cardadd2.svg');*/
+	-webkit-background-size: 30% 70%;
+	        background-size: 30%;
+	background-size: 400px;
+    background-position: 50%;
+    margin: 15px 15px 20px 15px;
+}
+
+#imgArea[type='showWiner']>#loserPage {
+	display: block;
+	background-color: #7f7f7f;
+}
+#imgArea[type='showWiner']>#loserPage[disabled]{
+	background-color: #d9d9d9;
+	pointer-events: none;
+}
+#imgArea[type='showloser']>#winerPage {
+	display: block;
+	background-color: #7f7f7f;
+}
+#imgArea[type='showWiner']>.imgBox[no='1'] {
+	display:-webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: flex;
+}
+#imgArea[type='showloser']>.imgBox[no='2'] {
+	display:-webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: flex;
+}
+div#clearTimeLabel {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	bottom: 5px;
+	left: 0;
+	font-size: 35px;
+	text-align: center;
+	color: #E64437;
+	font-family: "Courier", "微軟正黑體";
+}
+#changeWinImg, #changeLoseImg {
+	background-image: url('../../edit/images/newImg/changeImg.png');
+	z-index: 2;
+	display: block;
+	display: none;
+	cursor: pointer;
+	background-position-x: -65px;
+	width: 65px;
+	height: 65px;
+    background-color: white;
+    border-radius: 65px;
+    position: fixed;
+    top: calc(50% - 32px - 70px);
+    right: 50px;
+    border: 1px solid gainsboro;
+    box-shadow: 1px 2px 3px gainsboro;
+}
+.fullmain[stage='4'] #changeWinImg:hover:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid #FFC36C;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid transparent;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -27px;
+    opacity: 1;
+}
+
+.fullmain[stage='4'] #changeWinImg:hover:after {
+    content: "更換圖片";
+    position: absolute;
+    width: 81px;
+    background-color: #FFC36C;
+    top: 14px;
+    right: 76px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 9px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.fullmain[stage='4'] #changeLoseImg:hover:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid #FFC36C;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid transparent;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -27px;
+    opacity: 1;
+}
+
+.fullmain[stage='4'] #changeLoseImg:hover:after {
+    content: "更換圖片";
+    position: absolute;
+    width: 81px;
+    background-color: #FFC36C;
+    top: 14px;
+    right: 76px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 9px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+}
+#winerImg[type="hasimg"], #loserImg[type="hasimg"]{
+	pointer-events: none;
+	/*-webkit-box-shadow: inset 150px 0px 150px -150px #393939, inset -150px 0px 150px -150px #393939;
+	        box-shadow: inset 150px 0px 150px -150px #393939, inset -150px 0px 150px -150px #393939;*/
+}
+
+#winerImg[type="hasimg"]>#changeWinImg {
+	display: block;
+	pointer-events: all;
+}
+#loserImg[type="hasimg"]>#changeLoseImg {
+	display: block;
+	pointer-events: all;
+}
+
+#somedialog4 input[type="text"] {
+    width: 50%;
+    padding: 0px 10px ;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    height:50px;
+}
+
+#somedialog4 label {
+    width: 36%;
+    display: inline-block;
+    margin: 15px 0px;
+}
+#somedialog4 .dialog__content {
+    width: 450px;
+    height: 200px;
+}
+#somedialog5 .dialog__content {
+    width: 350px;
+    height: 150px;
+}
+#somedialog4 .dialog__content>h2:before {
+	content: "存檔";
+    position: absolute;
+    left: 0px;
+    top: -50px;
+    color: white;
+    z-index: 4;
+    font-size: 25px;
+}
+#somedialog5 .dialog__content>h2:before {
+	content: "系統訊息";
+    position: absolute;
+    left: 0px;
+    top: -50px;
+    color: white;
+    z-index: 4;
+    font-size: 25px;
+}
+
+button {
+    padding: 0.5em 1em;
+    outline: none;
+    font-weight: 600;
+    border: none;
+    color: #fff;
+    background-color: #4FA7D1;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.dialog__content>div {
+    position: absolute;
+    width: 130px;
+    bottom: 15px;
+    right: 15px;
+
+}
+#somedialog6 .dialog__content>div{
+	width: 100%;
+	 display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+    -webkit-box-pack: justify;
+	-webkit-justify-content: space-around;
+	   -moz-box-pack: justify;
+	        justify-content: space-around;
+}
+#somedialog5 meter {
+    width: 81%;
+    margin-top: 20px;
+    display: -webkit-inline-box;
+    display: inline-block;
+}
+div#qrcode {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-position: 50%;
+    -webkit-background-origin: content-box;
+            background-origin: content-box;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#qrcode>img {
+    width: auto;
+    height: 100%;
+    margin: auto;
+    visibility: hidden;
+}
+div#startPlay{
+	display: -webkit-inline-box;
+    align-items: baseline;
+}
+.playGame{
+	width: 70px;
+    height: 67px;
+    margin-left: 30px;
+    margin-top: 25px;
+    background-image: url('../../edit/images/fullimg3.png');
+    background-repeat: no-repeat;
+    background-position-x: -2242px;
+    background-position-y: -843px;
+}
+.playGame:hover:after{
+	content: "點我開始玩";
+	color: black;
+    font-size: 35px;
+    position: fixed;
+    padding: 10px 18px;
+    border-radius: 17px;
+    margin-left: 50px;
+    background-color: rgb(255, 195, 108);
+}
+.playGame:hover:before{
+	content: "";
+    width: 0px;
+    height: 0px;
+    border-right: 15px solid #FFC36C;
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 40px;
+    opacity: 1;
+}
+div#reEditCode {
+	left: 25px;
+	line-height: 37px;
+	width: 200px;
+	text-align: start;
+	display:block;
+	display: -webkit-box;
+}
+#reEditCode>span {
+	margin: 0px 5px;
+	-webkit-touch-callout: initial;
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+}
+#bottomBar {
+	background-color: rgba(245, 245, 245, 0.8);
+	max-width: 100%;
+	width: 640px;
+	height: 60px;
+	margin: 0px auto;
+	border-radius: 25px 25px 0px 0px;
+	-webkit-box-shadow: 2px 2px 5px gray;
+	        box-shadow: 2px 2px 5px gray;
+	z-index: 50;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	position: absolute;
+    left: 0px;
+    right: 0px;
+	bottom:0px;
+}
+#bg4Up{
+	width: 280px;
+    height: 180px;
+    background-image: url(../../edit/images/newImg/bgtitle.png);
+    position: absolute;
+    top: calc( 50% - 160px);
+    left: calc( 50% - 140px);
+    background-position-y: 360px;
+    display: none;
+}
+#bg4Down{
+	background-image: url(../../edit/images/newImg/bgcenter.png);
+	width: 660px;
+	height: 280px;
+    position: absolute;
+    bottom: 140px;
+    left: calc(50% - 330px);
+    background-position-y: -560px;
+    opacity: 0.7;
+}

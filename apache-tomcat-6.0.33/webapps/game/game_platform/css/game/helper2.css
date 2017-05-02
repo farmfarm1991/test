@@ -1,0 +1,452 @@
+body{
+	overflow:hidden;
+	margin: 0;
+	font-family: 微軟正黑體;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.fullmain[stage='2']{
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:-moz-box;
+	display:flex;
+}
+#aboutGameText{
+	font-size:20px;
+	font-family:Microsoft JhengHei;
+	font-family:微軟正黑體;
+	padding:5px;
+	background-color: rgba(220,200,200,0.5);
+	border:0;
+	width:100%;
+	text-align:center;
+	height: 40px;
+	border-radius: 5px;
+	line-height: 40px;
+}
+#aboutGame{
+	margin: 25px;
+	height: 40px;
+	position: absolute;
+	left: 10%;
+	right: 10%;
+}
+
+.imgBox{
+	width: 100%;
+	overflow: hidden;
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:-moz-box;
+	display:flex;
+}
+
+div[type='noimg'], div[type='hasimg'] {
+	width: 100%;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: flex;
+	-webkit-justify-content:center;
+	-webkit-box-pack:center;
+	   -moz-box-pack:center;
+	        justify-content:center;
+	-webkit-align-items:flex-start;
+	-webkit-box-align:start;
+	   -moz-box-align:start;
+	        align-items:flex-start;
+	-webkit-flex-direction:column;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	   -moz-box-orient:vertical;
+	   -moz-box-direction:normal;
+	        flex-direction:column;
+}
+/*div[type=noimg] {
+	border: 7px dashed #848484;
+	-webkit-align-items:center;
+	-webkit-box-align:center;
+	   -moz-box-align:center;
+	        align-items:center;
+	margin: 15px 15px 60px 15px;
+	border-radius: 10px;
+}*/
+.uploadbtn {	
+	/*background-image: url('../../edit/images/cardadd2.svg');*/
+	background-repeat: no-repeat;
+	background-position: 50%;
+	height: 100%;
+	width: 100%;
+}
+.uploadbtn>div {
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+	height: 100%;
+	/*background-image: url('../../edit/images/cardadd2.svg');*/
+	background-color: #DCDCDC;
+	display: none;
+}
+.uploadbtn>input {
+	height: calc(100% - 70px);
+	width: 100%;
+	cursor: pointer;
+	opacity: 0;
+}
+.imgbox>div[type='noimg']>img {
+	display: none;
+
+}
+.imgbox>div[type='hasimg']>div {
+	position: absolute;
+	width: 45px;
+	height: 33px;
+	font-size: 20px;
+	line-height: 50px;
+	z-index: 2;
+	display: block;
+	background-image: none;
+	top: 70px;
+	left: 10px;
+}
+.imgbox>div[type='hasimg']>div>div{
+	background-image: url('../../edit/images/newImg/changeImg.png');
+	pointer-events:auto;
+	cursor: pointer;
+	display: block;
+	border-radius: 65px;
+	background-position-x: -65px;
+	width: 65px;
+    height: 65px;
+    background-color: white;
+    border-radius: 65px;
+    /*padding: 5px;*/
+    position: fixed;
+    top: calc(50% - 32px - 70px);
+    right: 50px;
+    border: 1px solid gainsboro;
+    box-shadow: 1px 2px 3px gainsboro;
+}
+.imgbox>div[type='hasimg'] .imgDel{
+	background-image: url('../../edit/images/newImg/changeImg.png');
+    top: calc(50% - 20px);
+	background-position-x: 0px; 
+}
+.imgbox>div[type='hasimg']>div>div:active {
+}
+.imgbox>div[type='hasimg']>div>input {
+	visibility: hidden;
+	/*margin-top: -50px;*/
+}
+.imgBox>div[type='hasimg'] .cardimg {
+	/*-webkit-box-shadow: inset 150px 0px 150px -150px #393939, inset -150px 0px 150px -150px #393939;
+	        box-shadow: inset 150px 0px 150px -150px #393939, inset -150px 0px 150px -150px #393939;*/
+	display: block;
+    /*height: calc(100% - 41px - 70px);*/
+}
+.imgDel{
+	top: 180px;
+}
+.imgDel:hover:after{	
+    content: "刪除圖片";
+    position: absolute;
+    width: 81px;
+    background-color: #FFC36C;
+    top: 14px;
+    right: 76px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 9px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+}
+.cardimg {
+	width: 100%;
+	height: 100%;
+	display: block;
+	max-height:100%;
+	max-width:100%;
+	-webkit-background-size: contain;
+	        background-size: contain;
+    background-position: 50%;
+	background-repeat: no-repeat;
+	display: none;
+}
+div.imgActive:hover:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid #FFC36C;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid transparent;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -27px;
+    opacity: 1;
+}
+
+div.imgActive:hover:after {
+    content: "更換圖片";
+    position: absolute;
+    width: 81px;
+    background-color: #FFC36C;
+    top: 14px;
+    right: 76px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 9px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+}
+.pagebtn{
+	height:30px;
+	width: 130px;
+	position:absolute;
+	background-color:white;
+	cursor:pointer;
+	border-radius: 25px;
+	padding: 5px;
+	-webkit-box-shadow: 0px 0px 3px 2px #999;
+	        box-shadow: 0px 0px 3px 2px #999;
+	text-align: center;
+	line-height: 30px;
+	bottom: 20px;
+	z-index: 1;
+}
+#nextPage{
+	right: 20%;
+}
+#nextPage>img,#prevPage>img{
+	height:20px;
+	margin-left: 2px;
+}
+#prevPage{
+	left: 20%;
+}
+#skipDom{
+	height: 20px;
+}
+#nextBtn, #prevBtn{
+	width:100px;
+	height: 350px;
+	background-repeat: no-repeat;
+	text-align:center;
+	font-size:18px;
+	line-height:40px;
+	font-weight:bold;
+	background-image: url('../../edit/images/fullimg.png');
+	background-position-x: -1525px;
+	background-position-y: -700px;
+	zoom:0.35;
+}
+#nextBtn{
+	height: 300px;
+    width: 300px;
+    zoom: 0;
+    transform: scale(0.4);
+    background-position-x: -2400px;
+    margin-right: -88px;
+    margin-top: -21px;
+}
+#nextBtn:hover, #prevBtn:hover{
+	cursor:pointer;
+	border-radius:4px;
+	-webkit-box-shadow:0 2px rgba(0,0,0,0.07);
+	        box-shadow:0 2px rgba(0,0,0,0.07);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	line-height: 38px;
+}
+#nextBtn[disabled]{
+	cursor:not-allowed;
+	-webkit-box-shadow:none;
+	        box-shadow:none;
+	opacity: 0.65;
+	pointer-events: none;
+}
+#helper_NextBtn{
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	        align-items: center;
+}
+#prevBtn {
+	background-position-x: -1175px;
+}
+#helper_PrevBtn {
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	        align-items: center;
+}
+
+[contenteditable="true"].single-line {
+	white-space: nowrap;
+	width:200px;
+	overflow: hidden;
+} 
+[contenteditable="true"].single-line br {
+	display:none;
+}
+[contenteditable="true"].single-line * {
+	display:inline;
+	white-space:nowrap;
+}
+div#aboutGameText:empty:not(:focus):after {
+	content: "請輸入遊戲名稱";
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+@media screen and (max-width: 500px) {
+	#nextPage{
+		right:10%;
+	    width: 100px;
+	}
+	#prevPage {
+		left: 10%;
+	    width: 100px;
+	}
+}
+div#explain {
+	height: 70px;
+    position: fixed;
+    left: calc(50% - 85px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    z-index: 1;
+    bottom: 0px;
+}
+.page {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0px 15px;
+    /*box-shadow: 2px 2px 5px #606060;*/
+    cursor: pointer;
+    line-height: 70px;
+    text-align: center;
+    color: white;
+    background-size: 240px 360px;
+    position: relative;
+    top: 5px;
+}
+.page.show{
+    /*background: #7f7f7f;*/
+}
+.page.close{
+    /*background: #d9d9d9;*/
+}
+.page.use{
+    /*background: #404040;*/
+   top: 0px
+}
+.page[disabled]{
+  cursor:default;
+  pointer-events: none;
+}
+/* new image */
+#bg2Up{
+    width: 280px;
+    height: 180px;
+    background-image: url(../../edit/images/newImg/bgtitle.png);
+    position: absolute;
+    top: calc( 50% - 90px - 70px);
+    left: calc( 50% - 140px);
+    background-position-y: -360px;
+    display: none;
+}
+#bg2Down{
+	width: 660px;
+    height: 280px;
+    background-image: url(../../edit/images/newImg/bgcenter.png);
+    background-position-y: -280px;
+    position: absolute;
+    bottom: 70px;
+    left: calc( 50% - 330px);
+    display: none;
+    opacity: 0.7;
+}
+div#bottombar {
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    bottom: 0px;
+    background: #fafafa;
+    z-index: 1;
+}
+.titleT{
+    height: 70px;
+    font-size: 20px;
+    line-height: 70px;
+    color: #424242;
+    left: calc(50% - 150px);
+    position: relative;
+}
+#p1{
+  background-image: url(../../edit/images/newImg/button.png);
+  background-position-y: -120px;
+}
+#p2,#p2.show.close{
+  background-image: url(../../edit/images/newImg/button.png);
+  background-position-x: -60px;
+  background-position-y: -120px;
+}
+#p3,#p3.show.close{
+  background-image: url(../../edit/images/newImg/button.png);
+  background-position-x: -120px;
+  background-position-y: -120px;
+}
+#p1.show{
+  background-position-y: -60px;
+}
+#p2.show{
+  background-position-x: -60px;
+  background-position-y: -60px;
+}
+#p3.show{
+  background-position-x: -120px;
+  background-position-y: -60px;
+}
+#p1.use{
+  background-position-y: -180px;
+  margin-left: 10px;
+}
+#p2.use{
+  background-position-x: -60px;
+  background-position-y: -180px;
+  margin-left: 10px;
+}
+#p3.use{
+  background-position-x: -120px;
+  background-position-y: -180px;
+  margin-left: 10px;
+}

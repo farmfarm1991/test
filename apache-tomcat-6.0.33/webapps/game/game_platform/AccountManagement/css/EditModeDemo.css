@@ -1,0 +1,630 @@
+﻿html{
+	height:100%;
+	overflow: hidden;
+	font-family:"Microsoft YaHei",微軟雅黑,"Microsoft JhengHei";
+}
+body{
+	margin:0px;
+	height: 100%;
+	width:100%;
+}
+ul{
+	list-style-type: none;
+	padding:0px;
+	margin:0px;
+}
+li{
+	list-style-type: none;
+}
+.display_table{
+	display:table;
+}
+.float-left{
+	float: left;
+}
+.loading-mask{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:absolute;
+	height:100%;
+	width:100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
+}
+
+.text_orange{
+	color:#EE3B3B;
+	text-shadow: 1px 1px 5px #333;
+}
+.text_red{
+	color:#EE3B3B;
+
+}
+td{
+	font-size: 16px;
+	word-break: break-all;
+	white-space: pre-wrap;
+}
+/*外層容器*/
+.wrap{
+	display: flex;
+	justify-content:space-around;
+	width: 100%;
+	height:100%;
+	background: #eee;
+
+}
+/***************/
+/*班級欄位*/
+/****************/
+.classroom-list-wrap{
+	position:relative;
+	/*flex-grow:3;*/
+	width:30%;
+	height:100%;
+	border-right: 1px solid #aaa;
+	box-sizing:border-box;
+	padding-top: 117px
+}
+#classroom-list-title{
+	position:absolute;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background: #9DCC66;
+	color: #fff;
+	opacity:0.8;
+	font-size: 40px;
+	height: 75px;
+	width: 100%;
+	top: 42px;
+	text-align: center;
+	box-shadow: 0px 2px #aaa;
+
+}
+.classroom-import-button{
+	box-sizing:border-box;
+	border-radius: 5px;
+	cursor: pointer;
+	width:32px;
+	height:32px;
+	margin-left: 15px;
+}
+.classroom-delete-button{
+	cursor: pointer;
+	height:25px;
+	line-height: 25px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 2px solid #111;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: 15px;
+}
+.classroom-add-button{
+	cursor: pointer;
+	width:28px;
+	height:28px;
+	margin-left: 15px;
+}
+.classroom-import-button:hover{
+	border: 2px solid #111;
+	color: 
+}
+.classroom-delete-button:not(.delete-buttton-onclick):hover{
+	background: rgba(0,0,0,0.9);
+	color: white;
+}
+.delete-buttton-onclick{
+	background:rgba(255,0,0,0.7);
+}
+
+
+.ul-wrap-classroom{
+	overflow-y: auto;
+	height: 100%;
+}
+
+.li-wrap-classroom{
+	position:relative;
+	box-sizing:border-box;
+	padding:13px;
+	padding-right: 10px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+li:not(.selected-box):not(.list-high-light):hover{
+	background: rgba(255,255,255,0.3);
+
+}
+
+.class-name{
+	font-size: 30px;
+	text-align: left;
+}
+
+.class-info-box{
+	display: flex;
+}
+.class-check-box{
+	display:none;
+	width:10%;
+}
+.class-info{
+	width:85%;
+}
+
+
+.class-other-info{
+	display:flex;
+	position:relative;
+	height:15px;
+	font-size: 14px;
+	color: #333
+}
+.class-edit-button{
+	position:absolute;
+	right:10px;
+	width:5%;
+	cursor: pointer;
+}
+
+
+.grade-year{
+
+
+}
+.semester{
+
+}
+.student-number{
+
+}
+.selected-classroom{
+	background: rgba(255,255,255,0.3);
+	color:#111;
+}
+.selected-box{
+	background: rgba(255,255,255,0.3);
+	color:#111;
+}
+.list-high-light{
+	background: rgba(240, 231, 162, 0.3);
+}
+/***************/
+/*老師欄位*/
+/****************/
+.teacher-list-wrap{
+	position: relative;
+	/*flex-grow:3;*/
+	width:35%;
+	height:100%;
+	border-right: 1px solid #aaa;
+	box-sizing:border-box;
+	padding-top: 117px
+}
+#teacher-list-title{
+	position:absolute;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background: #9DCC66;
+	color: #fff;
+	opacity:0.8;
+	font-size: 40px;
+	height: 75px;
+	width: 100%;
+	top: 42px;
+	text-align: center;
+	box-shadow: 0px 2px #aaa;
+}
+
+.teacher-import-button{
+	box-sizing:border-box;
+	border-radius: 5px;
+	cursor: pointer;
+	width:32px;
+	height:32px;
+	margin-left: 15px;
+}
+.teacher-add-button{
+	cursor: pointer;
+	width:28px;
+	height:28px;
+	margin-left: 15px;
+}
+.teacher-delete-button{
+	cursor: pointer;
+	height:25px;
+	line-height: 25px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 2px solid #111;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: 15px;
+}
+.teacher-import-button:hover{
+	border: 2px solid #111;
+	color: 
+}
+.teacher-delete-button:not(.delete-buttton-onclick):hover{
+	background: rgba(0,0,0,0.9);
+	color: white;
+}
+.ul-wrap-teacher{
+	overflow-y: auto;
+	height: 100%;
+}
+.ul-wrap-teacher li{
+	position:relative;
+	display:flex;
+	padding:13px;
+	padding-right: 10px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.teacher-checkbox{
+	display:none;
+	width:10%;
+}
+.teacher-info-box{
+	display:flex;
+	width: 85%;
+}
+.teacher-info-box .teacher-name{
+	font-size: 20px;
+	line-height: 32px;
+	width:30%;
+}
+.teacher-info-box .teacher-other-info{
+	width:70%;
+}
+.teacher-edit-button{
+	position:absolute;
+	right:10px;
+	width:5%;
+	cursor: pointer;
+}
+
+
+
+/***************/
+/*學生欄位*/
+/****************/
+.student-list-wrap{
+	position: relative;
+	/*flex-grow:3;*/
+	width:35%;
+	height:100%;
+	border-right: 1px solid #aaa;
+	box-sizing:border-box;
+	padding-top: 117px
+}
+#student-list-title{
+	position:absolute;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background: #9DCC66;
+	color: #fff;
+	opacity:0.8;
+	font-size: 40px;
+	height: 75px;
+	width: 100%;
+	top: 42px;
+	text-align: center;
+	box-shadow: 0px 2px #aaa;
+}
+.student-import-button{
+	box-sizing:border-box;
+	border-radius: 5px;
+	cursor: pointer;
+	width:32px;
+	height:32px;
+	margin-left: 15px;
+}
+.student-add-button{
+	cursor: pointer;
+	width:28px;
+	height:28px;
+	margin-left: 15px;
+}
+.student-delete-button{
+	cursor: pointer;
+	height:25px;
+	line-height: 25px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 2px solid #111;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: 15px;
+}
+.student-import-button:hover{
+	border: 2px solid #111;
+	color: 
+}
+.student-delete-button:not(.delete-buttton-onclick):hover{
+	background: rgba(0,0,0,0.9);
+	color: white;
+}
+
+.ul-wrap-student{
+	overflow-y: auto;
+	height: 100%;
+}
+.ul-wrap-student li{
+	position:relative;
+	display:flex;
+	padding:13px;
+	padding-right: 10px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.student-checkbox{
+	display:none;
+	width:10%;
+}
+.student-info-box{
+	display:flex;
+	width: 85%;
+}
+.student-info-box .student-name{
+	font-size: 20px;
+	line-height: 32px;
+	width:30%;
+}
+.student-info-box .student-other-info{
+	width:70%;
+}
+.student-edit-button{
+	position:absolute;
+	right:10px;
+	width:5%;
+	cursor: pointer;
+}
+
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:26px;
+    height:26px;
+    margin:3px 0px 0 0;
+    vertical-align:middle;
+    background:url(../image/icon/unchecked_checkbox.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../image/icon/checked_checkbox.png) left top no-repeat;
+}
+
+/***************/
+/*老師學生編輯面板*/
+/****************/
+.person-edit-console-mask{
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background: rgba(0,0,0,0.3);
+}
+.in-console-div{
+	display: flex;
+	justify-content:start;
+	margin-bottom: 5px;
+}
+
+.person-edit-console-mask .console{
+	position: relative;
+	margin: 0px auto;
+	margin-top: 150px;
+	min-height:200px;
+	width:300px;
+	background: rgba(255,255,255,0.8);
+	border: 2px solid #111;
+	border-radius: 10px;
+	padding:30px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	font-size: 20px;
+}
+.title_bar{
+	position: absolute;
+	text-align: center;
+	line-height: 50px;
+	left: 0px;
+	top:0px;
+	height:50px;
+	width: 100%;
+	background: rgba(255,255,255,0.5);
+}
+.operation_bar{
+	position: absolute;
+	display: flex;
+	justify-content:center;
+	left: 0px;
+	bottom: 0px;
+	height:50px;
+	width: 100%;
+	border-top: 1px solid #111;
+
+}
+.add_button{
+	width: 50%;
+	height:100%;
+	background: rgba(34 ,139, 34,0.5);
+	border: none;
+	border-right: 1px solid #111;
+	font-size: 20px;
+
+}
+.add_button:hover{
+	background: rgba(34 ,139, 34,0.8);
+}
+.add_button:active{
+	box-shadow: 0px 0px 3px 3px rgba(245 ,245 ,220,0.5);
+}
+.cancel_button{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width:50%;
+	height:100%;
+	background: rgba(238, 99 ,99,0.5);
+	font-size: 20px;
+	text-align: center;
+}
+
+.cancel_button:hover{
+	background: rgba(238, 99 ,99,0.8);
+}
+.cancel_button:active{
+	box-shadow: 0px 0px 3px 3px rgba(245 ,245 ,220,0.5);
+}
+
+/***************/
+/*班級編輯面板*/
+/****************/
+.class-edit-console-mask{
+	position: absolute;
+	display:none;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background: rgba(0,0,0,0.3);
+}
+.class-edit-console-mask .class_console{
+	position: relative;
+	margin: 0px auto;
+	margin-top: 150px;
+	min-height:200px;
+	width:300px;
+	background: rgba(255,255,255,0.8);
+	border: 2px solid #111;
+	border-radius: 10px;
+	padding:30px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	font-size: 20px;
+}
+/***************/
+/*匯入編輯面板*/
+/****************/
+
+.import_console_mask{
+	position: absolute;
+	display:none;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background: rgba(0,0,0,0.3);
+}
+
+.import_console_mask .import_console{
+	white-space: nowrap;
+	position: relative;
+	margin: 0px auto;
+	margin-top: 50px;
+	min-height:300px;
+	width:700px;
+	background: rgba(255,255,255,0.8);
+	border: 2px solid #111;
+	border-radius: 10px;
+	padding:30px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	font-size: 20px;
+	overflow-x:hidden; 
+}
+.import_console_mask .tips{
+	display:flex;
+}
+.import_console_mask .import_console .import_example{
+	width: 70%;
+	margin-left: 15%;
+}
+
+.left_page{
+/*	display: inline-block;*/
+	transition: -webkit-transform 1s ease ;
+/*	width:500px;*/
+	/*display:none;*/
+}
+.right_page{
+/*	display: inline-block;*/
+	transition: -webkit-transform 1s ease ;
+	max-height: 300px;
+	margin-left: 0px;
+	overflow: auto;
+	width:100%;
+/*	display:none;*/
+}
+.right_page table{
+	width:100%;
+}
+.right_page tbody{
+
+}
+
+.import_preview{
+
+}
+.import_preview .table{
+	width:100%;
+}
+.in_console{
+
+}
+.in_preview>.left_page{
+		-webkit-transform: translateX(-540px);
+	
+}
+.in_preview>.right_page{
+		-webkit-transform: translateX(-540px);
+	
+}
+
+.import_console .add_button{
+		display: flex;
+	justify-content:center;
+	align-items:center;
+} 
+
+/*navbar**/
+div#navbar {
+	width: 100%;
+	height: 42px;
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	background: #A8D066;
+	background: -webkit-linear-gradient(top,#B4D467,#9DCC66);
+	background: linear-gradient(top,#B4D467,#9DCC66);
+}
+#navbar>a {
+	display: block;
+	width: 68px;
+}
+img.naviBtn {
+	width: 32px;
+	height: 32px;
+	padding: 4px 18px;
+	cursor: pointer;
+}
+
+/*account cant change**/
+input.id_field:read-only {
+	background: #DCDCDC;
+	cursor: not-allowed;
+}
