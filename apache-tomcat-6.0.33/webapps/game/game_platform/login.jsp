@@ -3,7 +3,7 @@
 String user_name = request.getParameter("user_name");
 String user_email = request.getParameter("user_email");
 String source_type = request.getParameter("source_type");
-String userIdentify = request.getParameter("userIdentify");
+// String userIdentify = request.getParameter("userIdentify");
 %>
 <!--
 使用alert(window.navigator.language);
